@@ -30,7 +30,7 @@ class Ui_NotesDSS
 public:
     QAction *action;
     QAction *action_3;
-    QAction *action_4;
+    QAction *aUnits;
     QAction *action_5;
     QAction *action_6;
     QAction *action_7;
@@ -68,8 +68,8 @@ public:
         action->setObjectName(QStringLiteral("action"));
         action_3 = new QAction(NotesDSS);
         action_3->setObjectName(QStringLiteral("action_3"));
-        action_4 = new QAction(NotesDSS);
-        action_4->setObjectName(QStringLiteral("action_4"));
+        aUnits = new QAction(NotesDSS);
+        aUnits->setObjectName(QStringLiteral("aUnits"));
         action_5 = new QAction(NotesDSS);
         action_5->setObjectName(QStringLiteral("action_5"));
         action_6 = new QAction(NotesDSS);
@@ -106,6 +106,8 @@ public:
         gridLayout->setObjectName(QStringLiteral("gridLayout"));
         tabWidget_pages = new QTabWidget(centralWidget);
         tabWidget_pages->setObjectName(QStringLiteral("tabWidget_pages"));
+        tabWidget_pages->setTabsClosable(true);
+        tabWidget_pages->setMovable(true);
         tab = new QWidget();
         tab->setObjectName(QStringLiteral("tab"));
         tabWidget_pages->addTab(tab, QString());
@@ -156,7 +158,7 @@ public:
         menu_2->addAction(action);
         menu_2->addSeparator();
         menu_2->addAction(action_3);
-        menu_2->addAction(action_4);
+        menu_2->addAction(aUnits);
         menu_2->addSeparator();
         menu_2->addAction(action_9);
         menu_4->addAction(action_5);
@@ -176,7 +178,7 @@ public:
         NotesDSS->setWindowTitle(QApplication::translate("NotesDSS", "NotesDSS", 0));
         action->setText(QApplication::translate("NotesDSS", "\320\241\320\276\321\202\321\200\321\203\320\264\320\275\320\270\320\272\320\270", 0));
         action_3->setText(QApplication::translate("NotesDSS", "\320\234\320\260\321\202\320\265\321\200\320\270\320\260\320\273\321\213", 0));
-        action_4->setText(QApplication::translate("NotesDSS", "\320\225\320\264\320\270\320\275\320\270\321\206\321\213 \320\270\320\267\320\274\320\265\321\200\320\265\320\275\320\270\321\217", 0));
+        aUnits->setText(QApplication::translate("NotesDSS", "\320\225\320\264\320\270\320\275\320\270\321\206\321\213 \320\270\320\267\320\274\320\265\321\200\320\265\320\275\320\270\321\217", 0));
         action_5->setText(QApplication::translate("NotesDSS", "\320\241\321\202\320\260\321\202\320\270\321\201\321\202\320\270\320\272\320\260", 0));
         action_6->setText(QApplication::translate("NotesDSS", "\320\237\320\276\320\274\320\276\321\211\321\214", 0));
         action_7->setText(QApplication::translate("NotesDSS", "\320\222\321\213\321\205\320\276\320\264", 0));

@@ -167,6 +167,7 @@ Makefile: ../NotesDSS/NotesDSS.pro C:/myQt/5.2.0/mingw48_32/mkspecs/win32-g++/qm
 		C:/myQt/5.2.0/mingw48_32/mkspecs/features/lex.prf \
 		../NotesDSS/NotesDSS.pro \
 		C:/myQt/5.2.0/mingw48_32/lib/Qt5Widgets.prl \
+		C:/myQt/5.2.0/mingw48_32/lib/Qt5Sql.prl \
 		C:/myQt/5.2.0/mingw48_32/lib/Qt5Gui.prl \
 		C:/myQt/5.2.0/mingw48_32/lib/Qt5Core.prl
 	$(QMAKE) -spec win32-g++ CONFIG+=debug CONFIG+=declarative_debug CONFIG+=qml_debug -o Makefile ..\NotesDSS\NotesDSS.pro
@@ -278,6 +279,7 @@ C:\myQt\5.2.0\mingw48_32\mkspecs\features\yacc.prf:
 C:\myQt\5.2.0\mingw48_32\mkspecs\features\lex.prf:
 ..\NotesDSS\NotesDSS.pro:
 C:/myQt/5.2.0/mingw48_32/lib/Qt5Widgets.prl:
+C:/myQt/5.2.0/mingw48_32/lib/Qt5Sql.prl:
 C:/myQt/5.2.0/mingw48_32/lib/Qt5Gui.prl:
 C:/myQt/5.2.0/mingw48_32/lib/Qt5Core.prl:
 qmake: FORCE

@@ -38,7 +38,7 @@ public:
     QGridLayout *gridLayout;
     QToolButton *toolButton_update;
     QToolButton *toolButton_add;
-    QToolButton *toolButton_close;
+    QToolButton *toolButton_del;
     QSpacerItem *verticalSpacer;
     QVBoxLayout *verticalLayout_2;
     QGroupBox *groupBox_units;
@@ -84,12 +84,12 @@ public:
 
         gridLayout->addWidget(toolButton_add, 1, 0, 1, 1);
 
-        toolButton_close = new QToolButton(groupBox_menu);
-        toolButton_close->setObjectName(QStringLiteral("toolButton_close"));
-        toolButton_close->setMinimumSize(QSize(30, 30));
-        toolButton_close->setMaximumSize(QSize(30, 30));
+        toolButton_del = new QToolButton(groupBox_menu);
+        toolButton_del->setObjectName(QStringLiteral("toolButton_del"));
+        toolButton_del->setMinimumSize(QSize(30, 30));
+        toolButton_del->setMaximumSize(QSize(30, 30));
 
-        gridLayout->addWidget(toolButton_close, 2, 0, 1, 1);
+        gridLayout->addWidget(toolButton_del, 2, 0, 1, 1);
 
         verticalSpacer = new QSpacerItem(20, 306, QSizePolicy::Minimum, QSizePolicy::Expanding);
 
@@ -167,6 +167,13 @@ public:
         QTableWidgetItem *__qtablewidgetitem2 = new QTableWidgetItem();
         tableWidget_units->setHorizontalHeaderItem(2, __qtablewidgetitem2);
         tableWidget_units->setObjectName(QStringLiteral("tableWidget_units"));
+        tableWidget_units->setEditTriggers(QAbstractItemView::NoEditTriggers);
+        tableWidget_units->setAlternatingRowColors(true);
+        tableWidget_units->setSelectionMode(QAbstractItemView::SingleSelection);
+        tableWidget_units->setSelectionBehavior(QAbstractItemView::SelectRows);
+        tableWidget_units->setSortingEnabled(true);
+        tableWidget_units->horizontalHeader()->setStretchLastSection(true);
+        tableWidget_units->verticalHeader()->setDefaultSectionSize(23);
 
         verticalLayout_2->addWidget(tableWidget_units);
 
@@ -179,7 +186,7 @@ public:
         label_status = new QLabel(units);
         label_status->setObjectName(QStringLiteral("label_status"));
         QFont font;
-        font.setPointSize(11);
+        font.setPointSize(8);
         font.setBold(true);
         font.setWeight(75);
         label_status->setFont(font);
@@ -202,7 +209,7 @@ public:
         groupBox_menu->setTitle(QString());
         toolButton_update->setText(QApplication::translate("units", "U", 0));
         toolButton_add->setText(QApplication::translate("units", "+", 0));
-        toolButton_close->setText(QApplication::translate("units", "-", 0));
+        toolButton_del->setText(QApplication::translate("units", "-", 0));
         groupBox_units->setTitle(QString());
         label->setText(QApplication::translate("units", "\320\235\320\260\320\270\320\274\320\265\320\275\320\276\320\262\320\260\320\275\320\270\320\265:", 0));
         pushButton_save->setText(QApplication::translate("units", "\320\241\320\276\321\205\321\200\320\260\320\275\320\270\321\202\321\214", 0));

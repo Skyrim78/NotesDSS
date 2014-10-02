@@ -7,8 +7,8 @@ units::units(QWidget *parent):QWidget(parent){
     crow = -1;
 
     ui.groupBox_units->hide();
-    //ui.tableWidget_units->setColumnHidden(0, true);
-    //ui.tableWidget_units->setColumnHidden(2, true);
+    ui.tableWidget_units->setColumnHidden(0, true);
+    ui.tableWidget_units->setColumnHidden(2, true);
 
     loadUnits();
 
@@ -17,6 +17,7 @@ units::units(QWidget *parent):QWidget(parent){
     connect(ui.tableWidget_units, SIGNAL(doubleClicked(QModelIndex)), this, SLOT(editUnits()));
     connect(ui.pushButton_close, SIGNAL(clicked()), ui.groupBox_units, SLOT(hide()));
     connect(ui.toolButton_del, SIGNAL(clicked()), this, SLOT(deleteUnits()));
+    connect(ui.pushButton_save, SIGNAL(clicked()), this, SLOT(saveUnits()));
 
 
 }
@@ -90,4 +91,30 @@ void units::makeStatus(const QString text){
     connect(timer, SIGNAL(timeout()), ui.label_status, SLOT(clear()));
     ui.label_status->setText(text);
     timer->start(10000);
+}
+
+void units::saveUnits(){
+    QString error;
+    if (ui.lineEdit->text().isEmpty()){
+        error.append("Введите наименование единицы измерения!");
+    } else {
+        if (id == 0){
+            QSqlQuery query("insert into units (name) values (?)");
+            query.bindValue(0, ui.lineEdit->text());
+            query.exec();
+            error.append(query.lastError().text());
+        } else if (id > 0){
+            QSqlQuery query(QString("update units set name = \'%1\' where units.id = \'%2\' ")
+                            .arg(ui.lineEdit->text())
+                            .arg(id));
+            query.exec();
+            error.append(query.lastError().text());
+        }
+    }
+    if (error.size() > 3){
+        makeStatus(error);
+    } else {
+        makeStatus("Сохранено.");
+        loadUnits();
+    }
 }
