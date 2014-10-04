@@ -35,7 +35,7 @@ public:
     QAction *action_6;
     QAction *action_7;
     QAction *action_9;
-    QAction *action_10;
+    QAction *aFirms;
     QAction *action_13;
     QAction *action_14;
     QAction *action_15;
@@ -78,8 +78,8 @@ public:
         action_7->setObjectName(QStringLiteral("action_7"));
         action_9 = new QAction(NotesDSS);
         action_9->setObjectName(QStringLiteral("action_9"));
-        action_10 = new QAction(NotesDSS);
-        action_10->setObjectName(QStringLiteral("action_10"));
+        aFirms = new QAction(NotesDSS);
+        aFirms->setObjectName(QStringLiteral("aFirms"));
         action_13 = new QAction(NotesDSS);
         action_13->setObjectName(QStringLiteral("action_13"));
         action_14 = new QAction(NotesDSS);
@@ -106,6 +106,8 @@ public:
         gridLayout->setObjectName(QStringLiteral("gridLayout"));
         tabWidget_pages = new QTabWidget(centralWidget);
         tabWidget_pages->setObjectName(QStringLiteral("tabWidget_pages"));
+        tabWidget_pages->setTabShape(QTabWidget::Triangular);
+        tabWidget_pages->setDocumentMode(true);
         tabWidget_pages->setTabsClosable(true);
         tabWidget_pages->setMovable(true);
         tab = new QWidget();
@@ -153,7 +155,7 @@ public:
         menu_6->addAction(action_20);
         menu_6->addAction(action_18);
         menu_6->addAction(action_21);
-        menu_2->addAction(action_10);
+        menu_2->addAction(aFirms);
         menu_2->addSeparator();
         menu_2->addAction(action);
         menu_2->addSeparator();
@@ -183,7 +185,7 @@ public:
         action_6->setText(QApplication::translate("NotesDSS", "\320\237\320\276\320\274\320\276\321\211\321\214", 0));
         action_7->setText(QApplication::translate("NotesDSS", "\320\222\321\213\321\205\320\276\320\264", 0));
         action_9->setText(QApplication::translate("NotesDSS", "\320\236\320\261\321\212\320\265\320\272\321\202\321\213", 0));
-        action_10->setText(QApplication::translate("NotesDSS", "\320\232\320\276\320\275\321\202\321\200\320\260\320\263\320\265\320\275\321\202\321\213", 0));
+        aFirms->setText(QApplication::translate("NotesDSS", "\320\232\320\276\320\275\321\202\321\200\320\260\320\263\320\265\320\275\321\202\321\213", 0));
         action_13->setText(QApplication::translate("NotesDSS", "\320\237\320\276\320\272\321\203\320\277\320\272\320\260", 0));
         action_14->setText(QApplication::translate("NotesDSS", "\320\237\321\200\320\270\321\210\320\273\320\276 \320\262 \321\200\320\265\320\274\320\276\320\275\321\202", 0));
         action_15->setText(QApplication::translate("NotesDSS", "\320\222\320\265\321\200\320\275\321\203\320\273\320\276\321\201\321\214 \320\277\320\276\321\201\320\273\320\265 \321\200\320\265\320\274\320\276\320\275\321\202\320\260, \320\277\321\200\320\276\320\262\320\265\321\200\320\272\320\270", 0));

@@ -17,8 +17,14 @@
    <layout class="QGridLayout" name="gridLayout">
     <item row="0" column="0">
      <widget class="QTabWidget" name="tabWidget_pages">
+      <property name="tabShape">
+       <enum>QTabWidget::Triangular</enum>
+      </property>
       <property name="currentIndex">
        <number>0</number>
+      </property>
+      <property name="documentMode">
+       <bool>true</bool>
       </property>
       <property name="tabsClosable">
        <bool>true</bool>
@@ -74,7 +80,7 @@
     <property name="title">
      <string>Справочники</string>
     </property>
-    <addaction name="action_10"/>
+    <addaction name="aFirms"/>
     <addaction name="separator"/>
     <addaction name="action"/>
     <addaction name="separator"/>
@@ -145,7 +151,7 @@
     <string>Объекты</string>
    </property>
   </action>
-  <action name="action_10">
+  <action name="aFirms">
    <property name="text">
     <string>Контрагенты</string>
    </property>

@@ -19,8 +19,8 @@
 
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_NotesDSS_t {
-    QByteArrayData data[8];
-    char stringdata[65];
+    QByteArrayData data[11];
+    char stringdata[102];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -30,16 +30,20 @@ struct qt_meta_stringdata_NotesDSS_t {
 static const qt_meta_stringdata_NotesDSS_t qt_meta_stringdata_NotesDSS = {
     {
 QT_MOC_LITERAL(0, 0, 8),
-QT_MOC_LITERAL(1, 9, 9),
-QT_MOC_LITERAL(2, 19, 0),
-QT_MOC_LITERAL(3, 20, 10),
-QT_MOC_LITERAL(4, 31, 4),
-QT_MOC_LITERAL(5, 36, 8),
-QT_MOC_LITERAL(6, 45, 6),
-QT_MOC_LITERAL(7, 52, 11)
+QT_MOC_LITERAL(1, 9, 11),
+QT_MOC_LITERAL(2, 21, 0),
+QT_MOC_LITERAL(3, 22, 12),
+QT_MOC_LITERAL(4, 35, 9),
+QT_MOC_LITERAL(5, 45, 10),
+QT_MOC_LITERAL(6, 56, 4),
+QT_MOC_LITERAL(7, 61, 8),
+QT_MOC_LITERAL(8, 70, 6),
+QT_MOC_LITERAL(9, 77, 11),
+QT_MOC_LITERAL(10, 89, 11)
     },
-    "NotesDSS\0connectDB\0\0openWidget\0name\0"
-    "QWidget*\0widget\0unitsWidget\0"
+    "NotesDSS\0readSetting\0\0writeSetting\0"
+    "connectDB\0openWidget\0name\0QWidget*\0"
+    "widget\0unitsWidget\0firmsWidget\0"
 };
 #undef QT_MOC_LITERAL
 
@@ -49,7 +53,7 @@ static const uint qt_meta_data_NotesDSS[] = {
        7,       // revision
        0,       // classname
        0,    0, // classinfo
-       3,   14, // methods
+       6,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -57,13 +61,19 @@ static const uint qt_meta_data_NotesDSS[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    0,   29,    2, 0x0a,
-       3,    2,   30,    2, 0x0a,
-       7,    0,   35,    2, 0x0a,
+       1,    0,   44,    2, 0x0a,
+       3,    0,   45,    2, 0x0a,
+       4,    0,   46,    2, 0x0a,
+       5,    2,   47,    2, 0x0a,
+       9,    0,   52,    2, 0x0a,
+      10,    0,   53,    2, 0x0a,
 
  // slots: parameters
     QMetaType::Void,
-    QMetaType::Void, QMetaType::QString, 0x80000000 | 5,    4,    6,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void, QMetaType::QString, 0x80000000 | 7,    6,    8,
+    QMetaType::Void,
     QMetaType::Void,
 
        0        // eod
@@ -74,15 +84,18 @@ void NotesDSS::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, vo
     if (_c == QMetaObject::InvokeMetaMethod) {
         NotesDSS *_t = static_cast<NotesDSS *>(_o);
         switch (_id) {
-        case 0: _t->connectDB(); break;
-        case 1: _t->openWidget((*reinterpret_cast< const QString(*)>(_a[1])),(*reinterpret_cast< QWidget*(*)>(_a[2]))); break;
-        case 2: _t->unitsWidget(); break;
+        case 0: _t->readSetting(); break;
+        case 1: _t->writeSetting(); break;
+        case 2: _t->connectDB(); break;
+        case 3: _t->openWidget((*reinterpret_cast< const QString(*)>(_a[1])),(*reinterpret_cast< QWidget*(*)>(_a[2]))); break;
+        case 4: _t->unitsWidget(); break;
+        case 5: _t->firmsWidget(); break;
         default: ;
         }
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
         switch (_id) {
         default: *reinterpret_cast<int*>(_a[0]) = -1; break;
-        case 1:
+        case 3:
             switch (*reinterpret_cast<int*>(_a[1])) {
             default: *reinterpret_cast<int*>(_a[0]) = -1; break;
             case 1:
@@ -118,13 +131,13 @@ int NotesDSS::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 3)
+        if (_id < 6)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 3;
+        _id -= 6;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 3)
+        if (_id < 6)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 3;
+        _id -= 6;
     }
     return _id;
 }

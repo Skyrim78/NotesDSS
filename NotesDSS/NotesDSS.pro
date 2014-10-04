@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui sql
+QT       += core gui sql xml
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -14,10 +14,13 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         notesdss.cpp \
-    units.cpp
+    units.cpp \
+    firms.cpp
 
 HEADERS  += notesdss.h \
-    units.h
+    units.h \
+    firms.h
 
 FORMS    += notesdss.ui \
-    units.ui
+    units.ui \
+    firms.ui

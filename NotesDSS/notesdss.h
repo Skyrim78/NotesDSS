@@ -3,9 +3,12 @@
 
 #include <QMainWindow>
 #include <QtSql/QtSql>
+#include <QSettings>
+#include <QtXml/QtXml>
 
 //widgets
 #include "units.h"
+#include "firms.h"
 
 namespace Ui {
 class NotesDSS;
@@ -23,10 +26,14 @@ public:
 private:
     Ui::NotesDSS *ui;
 public slots:
+    void readSetting();
+    void writeSetting();
+
     void connectDB();
     void openWidget(const QString name, QWidget *widget);
 
     void unitsWidget();
+    void firmsWidget();
 };
 
 #endif // NOTESDSS_H
