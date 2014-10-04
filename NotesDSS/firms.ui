@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>605</width>
-    <height>540</height>
+    <width>527</width>
+    <height>535</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -58,6 +58,26 @@
           </item>
           <item row="1" column="0">
            <layout class="QHBoxLayout" name="horizontalLayout_2">
+            <item>
+             <widget class="QLabel" name="label_7">
+              <property name="text">
+               <string>ИНН</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="lineEdit_inn">
+              <property name="maximumSize">
+               <size>
+                <width>120</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
             <item>
              <widget class="QLabel" name="label_2">
               <property name="text">
@@ -178,16 +198,6 @@
           <item row="2" column="0">
            <layout class="QHBoxLayout" name="horizontalLayout_7">
             <item>
-             <widget class="QLabel" name="label_7">
-              <property name="text">
-               <string>ИНН</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLineEdit" name="lineEdit_inn"/>
-            </item>
-            <item>
              <widget class="QLabel" name="label_8">
               <property name="text">
                <string>ОКПО</string>
@@ -246,7 +256,7 @@
         </property>
         <property name="sizeHint" stdset="0">
          <size>
-          <width>346</width>
+          <width>268</width>
           <height>20</height>
          </size>
         </property>
@@ -278,12 +288,47 @@
      </column>
      <column>
       <property name="text">
+       <string>ИНН</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
        <string>Наименование</string>
       </property>
      </column>
      <column>
       <property name="text">
+       <string>Адрес</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Контактное лицо</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
        <string>Телефон</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>E-mail</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Банк</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Счет</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>ОКПО</string>
       </property>
      </column>
      <column>
@@ -364,7 +409,7 @@
         <property name="sizeHint" stdset="0">
          <size>
           <width>20</width>
-          <height>408</height>
+          <height>403</height>
          </size>
         </property>
        </spacer>

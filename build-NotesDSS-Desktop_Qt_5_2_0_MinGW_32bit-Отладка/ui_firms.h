@@ -42,6 +42,8 @@ public:
     QLabel *label;
     QLineEdit *lineEdit_name;
     QHBoxLayout *horizontalLayout_2;
+    QLabel *label_7;
+    QLineEdit *lineEdit_inn;
     QLabel *label_2;
     QLineEdit *lineEdit_address;
     QHBoxLayout *horizontalLayout_3;
@@ -63,8 +65,6 @@ public:
     QLineEdit *lineEdit_rs;
     QSpacerItem *horizontalSpacer_3;
     QHBoxLayout *horizontalLayout_7;
-    QLabel *label_7;
-    QLineEdit *lineEdit_inn;
     QLabel *label_8;
     QLineEdit *lineEdit_okpo;
     QSpacerItem *horizontalSpacer_4;
@@ -87,7 +87,7 @@ public:
     {
         if (firms->objectName().isEmpty())
             firms->setObjectName(QStringLiteral("firms"));
-        firms->resize(605, 540);
+        firms->resize(527, 535);
         gridLayout_6 = new QGridLayout(firms);
         gridLayout_6->setObjectName(QStringLiteral("gridLayout_6"));
         groupBox_form = new QGroupBox(firms);
@@ -119,6 +119,17 @@ public:
 
         horizontalLayout_2 = new QHBoxLayout();
         horizontalLayout_2->setObjectName(QStringLiteral("horizontalLayout_2"));
+        label_7 = new QLabel(tab);
+        label_7->setObjectName(QStringLiteral("label_7"));
+
+        horizontalLayout_2->addWidget(label_7);
+
+        lineEdit_inn = new QLineEdit(tab);
+        lineEdit_inn->setObjectName(QStringLiteral("lineEdit_inn"));
+        lineEdit_inn->setMaximumSize(QSize(120, 16777215));
+
+        horizontalLayout_2->addWidget(lineEdit_inn);
+
         label_2 = new QLabel(tab);
         label_2->setObjectName(QStringLiteral("label_2"));
 
@@ -219,16 +230,6 @@ public:
 
         horizontalLayout_7 = new QHBoxLayout();
         horizontalLayout_7->setObjectName(QStringLiteral("horizontalLayout_7"));
-        label_7 = new QLabel(tab_2);
-        label_7->setObjectName(QStringLiteral("label_7"));
-
-        horizontalLayout_7->addWidget(label_7);
-
-        lineEdit_inn = new QLineEdit(tab_2);
-        lineEdit_inn->setObjectName(QStringLiteral("lineEdit_inn"));
-
-        horizontalLayout_7->addWidget(lineEdit_inn);
-
         label_8 = new QLabel(tab_2);
         label_8->setObjectName(QStringLiteral("label_8"));
 
@@ -264,7 +265,7 @@ public:
 
         gridLayout_4->addWidget(tabWidget, 0, 0, 1, 3);
 
-        horizontalSpacer_2 = new QSpacerItem(346, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+        horizontalSpacer_2 = new QSpacerItem(268, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
         gridLayout_4->addItem(horizontalSpacer_2, 1, 0, 1, 1);
 
@@ -282,8 +283,8 @@ public:
         gridLayout_6->addWidget(groupBox_form, 0, 1, 1, 1);
 
         tableWidget_firms = new QTableWidget(firms);
-        if (tableWidget_firms->columnCount() < 4)
-            tableWidget_firms->setColumnCount(4);
+        if (tableWidget_firms->columnCount() < 11)
+            tableWidget_firms->setColumnCount(11);
         QTableWidgetItem *__qtablewidgetitem = new QTableWidgetItem();
         tableWidget_firms->setHorizontalHeaderItem(0, __qtablewidgetitem);
         QTableWidgetItem *__qtablewidgetitem1 = new QTableWidgetItem();
@@ -292,6 +293,20 @@ public:
         tableWidget_firms->setHorizontalHeaderItem(2, __qtablewidgetitem2);
         QTableWidgetItem *__qtablewidgetitem3 = new QTableWidgetItem();
         tableWidget_firms->setHorizontalHeaderItem(3, __qtablewidgetitem3);
+        QTableWidgetItem *__qtablewidgetitem4 = new QTableWidgetItem();
+        tableWidget_firms->setHorizontalHeaderItem(4, __qtablewidgetitem4);
+        QTableWidgetItem *__qtablewidgetitem5 = new QTableWidgetItem();
+        tableWidget_firms->setHorizontalHeaderItem(5, __qtablewidgetitem5);
+        QTableWidgetItem *__qtablewidgetitem6 = new QTableWidgetItem();
+        tableWidget_firms->setHorizontalHeaderItem(6, __qtablewidgetitem6);
+        QTableWidgetItem *__qtablewidgetitem7 = new QTableWidgetItem();
+        tableWidget_firms->setHorizontalHeaderItem(7, __qtablewidgetitem7);
+        QTableWidgetItem *__qtablewidgetitem8 = new QTableWidgetItem();
+        tableWidget_firms->setHorizontalHeaderItem(8, __qtablewidgetitem8);
+        QTableWidgetItem *__qtablewidgetitem9 = new QTableWidgetItem();
+        tableWidget_firms->setHorizontalHeaderItem(9, __qtablewidgetitem9);
+        QTableWidgetItem *__qtablewidgetitem10 = new QTableWidgetItem();
+        tableWidget_firms->setHorizontalHeaderItem(10, __qtablewidgetitem10);
         tableWidget_firms->setObjectName(QStringLiteral("tableWidget_firms"));
 
         gridLayout_6->addWidget(tableWidget_firms, 1, 1, 1, 1);
@@ -325,7 +340,7 @@ public:
 
         gridLayout_5->addWidget(toolButton_del, 1, 0, 1, 1);
 
-        verticalSpacer_2 = new QSpacerItem(20, 408, QSizePolicy::Minimum, QSizePolicy::Expanding);
+        verticalSpacer_2 = new QSpacerItem(20, 403, QSizePolicy::Minimum, QSizePolicy::Expanding);
 
         gridLayout_5->addItem(verticalSpacer_2, 2, 0, 1, 1);
 
@@ -346,6 +361,8 @@ public:
         firms->setWindowTitle(QApplication::translate("firms", "Form", 0));
         groupBox_form->setTitle(QString());
         label->setText(QApplication::translate("firms", "\320\235\320\260\320\270\320\274\320\265\320\275\320\276\320\262\320\260\320\275\320\270\320\265:", 0));
+        label_7->setText(QApplication::translate("firms", "\320\230\320\235\320\235", 0));
+        lineEdit_inn->setText(QString());
         label_2->setText(QApplication::translate("firms", "\320\220\320\264\321\200\320\265\321\201:", 0));
         label_3->setText(QApplication::translate("firms", "\320\242\320\265\320\273\320\265\321\204\320\276\320\275:", 0));
         label_4->setText(QApplication::translate("firms", "E-mail:", 0));
@@ -353,7 +370,6 @@ public:
         tabWidget->setTabText(tabWidget->indexOf(tab), QApplication::translate("firms", "\320\230\320\275\321\204\320\276\321\200\320\274\320\260\321\206\320\270\321\217", 0));
         label_5->setText(QApplication::translate("firms", "\320\235\320\260\320\270\320\274\320\265\320\275\320\276\320\262\320\260\320\275\320\270\320\265:", 0));
         label_6->setText(QApplication::translate("firms", "\320\242\320\265\320\272\321\203\321\211\320\270\320\271 \321\201\321\207\320\265\321\202:", 0));
-        label_7->setText(QApplication::translate("firms", "\320\230\320\235\320\235", 0));
         label_8->setText(QApplication::translate("firms", "\320\236\320\232\320\237\320\236", 0));
         tabWidget->setTabText(tabWidget->indexOf(tab_2), QApplication::translate("firms", "\320\221\320\260\320\275\320\272", 0));
         tabWidget->setTabText(tabWidget->indexOf(tab_3), QApplication::translate("firms", "\320\237\321\200\320\270\320\274\320\265\321\207\320\260\320\275\320\270\320\265", 0));
@@ -362,11 +378,25 @@ public:
         QTableWidgetItem *___qtablewidgetitem = tableWidget_firms->horizontalHeaderItem(0);
         ___qtablewidgetitem->setText(QApplication::translate("firms", "id", 0));
         QTableWidgetItem *___qtablewidgetitem1 = tableWidget_firms->horizontalHeaderItem(1);
-        ___qtablewidgetitem1->setText(QApplication::translate("firms", "\320\235\320\260\320\270\320\274\320\265\320\275\320\276\320\262\320\260\320\275\320\270\320\265", 0));
+        ___qtablewidgetitem1->setText(QApplication::translate("firms", "\320\230\320\235\320\235", 0));
         QTableWidgetItem *___qtablewidgetitem2 = tableWidget_firms->horizontalHeaderItem(2);
-        ___qtablewidgetitem2->setText(QApplication::translate("firms", "\320\242\320\265\320\273\320\265\321\204\320\276\320\275", 0));
+        ___qtablewidgetitem2->setText(QApplication::translate("firms", "\320\235\320\260\320\270\320\274\320\265\320\275\320\276\320\262\320\260\320\275\320\270\320\265", 0));
         QTableWidgetItem *___qtablewidgetitem3 = tableWidget_firms->horizontalHeaderItem(3);
-        ___qtablewidgetitem3->setText(QApplication::translate("firms", "\321\201", 0));
+        ___qtablewidgetitem3->setText(QApplication::translate("firms", "\320\220\320\264\321\200\320\265\321\201", 0));
+        QTableWidgetItem *___qtablewidgetitem4 = tableWidget_firms->horizontalHeaderItem(4);
+        ___qtablewidgetitem4->setText(QApplication::translate("firms", "\320\232\320\276\320\275\321\202\320\260\320\272\321\202\320\275\320\276\320\265 \320\273\320\270\321\206\320\276", 0));
+        QTableWidgetItem *___qtablewidgetitem5 = tableWidget_firms->horizontalHeaderItem(5);
+        ___qtablewidgetitem5->setText(QApplication::translate("firms", "\320\242\320\265\320\273\320\265\321\204\320\276\320\275", 0));
+        QTableWidgetItem *___qtablewidgetitem6 = tableWidget_firms->horizontalHeaderItem(6);
+        ___qtablewidgetitem6->setText(QApplication::translate("firms", "E-mail", 0));
+        QTableWidgetItem *___qtablewidgetitem7 = tableWidget_firms->horizontalHeaderItem(7);
+        ___qtablewidgetitem7->setText(QApplication::translate("firms", "\320\221\320\260\320\275\320\272", 0));
+        QTableWidgetItem *___qtablewidgetitem8 = tableWidget_firms->horizontalHeaderItem(8);
+        ___qtablewidgetitem8->setText(QApplication::translate("firms", "\320\241\321\207\320\265\321\202", 0));
+        QTableWidgetItem *___qtablewidgetitem9 = tableWidget_firms->horizontalHeaderItem(9);
+        ___qtablewidgetitem9->setText(QApplication::translate("firms", "\320\236\320\232\320\237\320\236", 0));
+        QTableWidgetItem *___qtablewidgetitem10 = tableWidget_firms->horizontalHeaderItem(10);
+        ___qtablewidgetitem10->setText(QApplication::translate("firms", "\321\201", 0));
         label_status->setText(QString());
         groupBox_menu->setTitle(QString());
         toolButton_add->setText(QApplication::translate("firms", "+", 0));

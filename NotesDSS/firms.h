@@ -4,6 +4,9 @@
 #include "ui_firms.h"
 #include <QtSql/QtSql>
 #include <QtXml/QtXml>
+//--------------
+#include "columnEditor.h"
+
 
 class firms:public QWidget{
     Q_OBJECT
@@ -14,13 +17,14 @@ public:
     int id;
     int crow;
 
-    virtual void QCloseEvent(QCloseEvent *);
+    virtual void closeEvent(QCloseEvent *);
 
 public slots:
     void readSetting();
     void writeSetting();
 
     void makeStatus(const QString text);
+    void makeColumns();
 
     void loadFirms();
 

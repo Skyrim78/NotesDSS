@@ -15,12 +15,15 @@ TEMPLATE = app
 SOURCES += main.cpp\
         notesdss.cpp \
     units.cpp \
-    firms.cpp
+    firms.cpp \
+    columnEditor.cpp
 
 HEADERS  += notesdss.h \
     units.h \
-    firms.h
+    firms.h \
+    columnEditor.h
 
 FORMS    += notesdss.ui \
     units.ui \
-    firms.ui
+    firms.ui \
+    columnsEditor.ui
