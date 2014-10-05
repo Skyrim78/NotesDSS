@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <setting>
-    <main x="78" y="82" width="898" height="510"/>
-    <firms rs="0" phone="2" inn="2" name="2" bank="0" email="0" mfo="0" address="0" face="2"/>
+    <main x="78" y="82" height="510" width="898"/>
+    <firms okpo="0" email="0" name="2" rs="0" bank="0" phone="2" address="0" face="0" inn="2"/>
 </setting>

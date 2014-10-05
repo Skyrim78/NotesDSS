@@ -49,10 +49,16 @@ public:
         QFont font;
         font.setPointSize(10);
         listWidget_column->setFont(font);
-        listWidget_column->setEditTriggers(QAbstractItemView::NoEditTriggers);
+        listWidget_column->setEditTriggers(QAbstractItemView::SelectedClicked);
+        listWidget_column->setDragEnabled(false);
+        listWidget_column->setDragDropOverwriteMode(false);
+        listWidget_column->setDragDropMode(QAbstractItemView::NoDragDrop);
+        listWidget_column->setDefaultDropAction(Qt::IgnoreAction);
         listWidget_column->setAlternatingRowColors(true);
-        listWidget_column->setSelectionMode(QAbstractItemView::MultiSelection);
+        listWidget_column->setSelectionMode(QAbstractItemView::SingleSelection);
         listWidget_column->setSelectionBehavior(QAbstractItemView::SelectRows);
+        listWidget_column->setTextElideMode(Qt::ElideNone);
+        listWidget_column->setWordWrap(true);
         listWidget_column->setSelectionRectVisible(false);
 
         verticalLayout->addWidget(listWidget_column);

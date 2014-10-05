@@ -7,8 +7,10 @@
 class cEditor:public QDialog{
     Q_OBJECT
 public:
-    cEditor(QWidget *parent = 0);
+    cEditor(int _code, QWidget *parent = 0);
     Ui::Dialog ui;
+
+    QString code;
 
 public slots:
     void readColumn();
