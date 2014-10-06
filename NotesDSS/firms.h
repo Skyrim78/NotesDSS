@@ -27,6 +27,9 @@ public slots:
     void makeColumns();
 
     void loadFirms();
+    void addFirms();
+    void delFirms();
+    void saveFirms();
 
 };
 
