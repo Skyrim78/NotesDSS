@@ -28,6 +28,7 @@ public slots:
 
     void loadFirms();
     void addFirms();
+    void editFirms();
     void delFirms();
     void saveFirms();
 

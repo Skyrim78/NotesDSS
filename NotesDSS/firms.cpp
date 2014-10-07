@@ -13,7 +13,11 @@ firms::firms(QWidget *parent):QWidget(parent){
     readSetting();
     loadFirms();
 
-    connect(ui.toolButton_del, SIGNAL(clicked()), this, SLOT(makeColumns()));
+    connect(ui.toolButton_del, SIGNAL(clicked()), this, SLOT(delFirms()));
+    connect(ui.toolButton_add, SIGNAL(clicked()), this, SLOT(addFirms()));
+    connect(ui.tableWidget_firms, SIGNAL(doubleClicked(QModelIndex)), this, SLOT(editFirms()));
+    connect(ui.pushButton_save, SIGNAL(clicked()), this, SLOT(saveFirms()));
+    connect(ui.pushButton_close, SIGNAL(clicked()), ui.groupBox_form, SLOT(hide()));
 }
 
 void firms::closeEvent(QCloseEvent *){
@@ -88,7 +92,7 @@ void firms::loadFirms(){
     }
     ui.tableWidget_firms->resizeColumnsToContents();
     ui.tableWidget_firms->horizontalHeader()->setStretchLastSection(true);
-    ui.tableWidget_firms->set
+
 }
 
 void firms::makeStatus(const QString text){
@@ -121,6 +125,27 @@ void firms::addFirms(){
     ui.lineEdit_name->setFocus();
 }
 
+void firms::editFirms(){
+    crow = ui.tableWidget_firms->currentRow();
+    id = ui.tableWidget_firms->item(crow, 0)->text().toInt();
+    QSqlQuery query(QString("select firm.inn, firm.name, firm.address, firm.phone, firm.email, "
+                            "firm.face, firm.bank, firm.rs, firm.mfo, firm.note "
+                            "from firm "
+                            "where firm.id = \'%1\' ").arg(id));
+    query.next();
+    ui.lineEdit_inn->setText(query.value(0).toString());
+    ui.lineEdit_name->setText(query.value(1).toString());
+    ui.lineEdit_address->setText(query.value(2).toString());
+    ui.lineEdit_phone->setText(query.value(3).toString());
+    ui.lineEdit_mail->setText(query.value(4).toString());
+    ui.lineEdit_face->setText(query.value(5).toString());
+    ui.lineEdit_bank->setText(query.value(6).toString());
+    ui.lineEdit_rs->setText(query.value(7).toString());
+    ui.lineEdit_okpo->setText(query.value(8).toString());
+    ui.lineEdit_inn->setFocus();
+    ui.groupBox_form->setVisible(true);
+}
+
 void firms::delFirms(){
     crow = ui.tableWidget_firms->currentRow();
     QString error;
@@ -142,6 +167,7 @@ void firms::delFirms(){
         makeStatus(error);
     } else {
         makeStatus("Удалено!");
+        ui.groupBox_form->hide();
         loadFirms();
     }
 }
@@ -168,9 +194,27 @@ void firms::saveFirms(){
             error.append(query.lastError().text());
         } else if (id > 0){
             QSqlQuery query(QString("update firm set inn = \'%1\', name=\'%2\', address=\'%3\', phone=\'%4\', email=\'%5\', "
-                                    "face = \'%6\', bank = \'%7\', mfo = \'%8\', note = \'%9\' "));
+                                    "face = \'%6\', bank = \'%7\', mfo = \'%8\', note = \'%9\' where firm.id = \'%10\' ")
+                            .arg(ui.lineEdit_inn->text())
+                            .arg(ui.lineEdit_name->text())
+                            .arg(ui.lineEdit_address->text())
+                            .arg(ui.lineEdit_phone->text())
+                            .arg(ui.lineEdit_mail->text())
+                            .arg(ui.lineEdit_face->text())
+                            .arg(ui.lineEdit_bank->text())
+                            .arg(ui.lineEdit_rs->text())
+                            .arg(ui.lineEdit_okpo->text())
+                            .arg(id));
+            query.exec();
+            error.append(query.lastError().text());
         }
-
+        if (error.size() > 3){
+            makeStatus(error);
+        } else {
+            makeStatus("Сохранено!");
+            loadFirms();
+            addFirms();
+        }
 
     }
 }
