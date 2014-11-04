@@ -188,8 +188,6 @@ public:
         gridLayout->addLayout(horizontalLayout_4, 3, 0, 1, 1);
 
         tabWidget->addTab(tab, QString());
-        label->raise();
-        lineEdit_name->raise();
         tab_2 = new QWidget();
         tab_2->setObjectName(QStringLiteral("tab_2"));
         gridLayout_2 = new QGridLayout(tab_2);
@@ -308,6 +306,13 @@ public:
         QTableWidgetItem *__qtablewidgetitem10 = new QTableWidgetItem();
         tableWidget_firms->setHorizontalHeaderItem(10, __qtablewidgetitem10);
         tableWidget_firms->setObjectName(QStringLiteral("tableWidget_firms"));
+        tableWidget_firms->setEditTriggers(QAbstractItemView::NoEditTriggers);
+        tableWidget_firms->setAlternatingRowColors(true);
+        tableWidget_firms->setSelectionMode(QAbstractItemView::SingleSelection);
+        tableWidget_firms->setSelectionBehavior(QAbstractItemView::SelectRows);
+        tableWidget_firms->setSortingEnabled(true);
+        tableWidget_firms->horizontalHeader()->setStretchLastSection(true);
+        tableWidget_firms->verticalHeader()->setDefaultSectionSize(22);
 
         gridLayout_6->addWidget(tableWidget_firms, 1, 1, 1, 1);
 

@@ -16,14 +16,17 @@ SOURCES += main.cpp\
         notesdss.cpp \
     units.cpp \
     firms.cpp \
-    columnEditor.cpp
+    columnEditor.cpp \
+    people.cpp
 
 HEADERS  += notesdss.h \
     units.h \
     firms.h \
-    columnEditor.h
+    columnEditor.h \
+    people.h
 
 FORMS    += notesdss.ui \
     units.ui \
     firms.ui \
-    columnsEditor.ui
+    columnsEditor.ui \
+    people.ui

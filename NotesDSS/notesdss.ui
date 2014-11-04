@@ -82,7 +82,7 @@
     </property>
     <addaction name="aFirms"/>
     <addaction name="separator"/>
-    <addaction name="action"/>
+    <addaction name="aPeople"/>
     <addaction name="separator"/>
     <addaction name="action_3"/>
     <addaction name="aUnits"/>
@@ -116,7 +116,7 @@
    </attribute>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
-  <action name="action">
+  <action name="aPeople">
    <property name="text">
     <string>Сотрудники</string>
    </property>

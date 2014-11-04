@@ -28,7 +28,7 @@ QT_BEGIN_NAMESPACE
 class Ui_NotesDSS
 {
 public:
-    QAction *action;
+    QAction *aPeople;
     QAction *action_3;
     QAction *aUnits;
     QAction *action_5;
@@ -64,8 +64,8 @@ public:
         if (NotesDSS->objectName().isEmpty())
             NotesDSS->setObjectName(QStringLiteral("NotesDSS"));
         NotesDSS->resize(871, 563);
-        action = new QAction(NotesDSS);
-        action->setObjectName(QStringLiteral("action"));
+        aPeople = new QAction(NotesDSS);
+        aPeople->setObjectName(QStringLiteral("aPeople"));
         action_3 = new QAction(NotesDSS);
         action_3->setObjectName(QStringLiteral("action_3"));
         aUnits = new QAction(NotesDSS);
@@ -157,7 +157,7 @@ public:
         menu_6->addAction(action_21);
         menu_2->addAction(aFirms);
         menu_2->addSeparator();
-        menu_2->addAction(action);
+        menu_2->addAction(aPeople);
         menu_2->addSeparator();
         menu_2->addAction(action_3);
         menu_2->addAction(aUnits);
@@ -178,7 +178,7 @@ public:
     void retranslateUi(QMainWindow *NotesDSS)
     {
         NotesDSS->setWindowTitle(QApplication::translate("NotesDSS", "NotesDSS", 0));
-        action->setText(QApplication::translate("NotesDSS", "\320\241\320\276\321\202\321\200\321\203\320\264\320\275\320\270\320\272\320\270", 0));
+        aPeople->setText(QApplication::translate("NotesDSS", "\320\241\320\276\321\202\321\200\321\203\320\264\320\275\320\270\320\272\320\270", 0));
         action_3->setText(QApplication::translate("NotesDSS", "\320\234\320\260\321\202\320\265\321\200\320\270\320\260\320\273\321\213", 0));
         aUnits->setText(QApplication::translate("NotesDSS", "\320\225\320\264\320\270\320\275\320\270\321\206\321\213 \320\270\320\267\320\274\320\265\321\200\320\265\320\275\320\270\321\217", 0));
         action_5->setText(QApplication::translate("NotesDSS", "\320\241\321\202\320\260\321\202\320\270\321\201\321\202\320\270\320\272\320\260", 0));

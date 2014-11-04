@@ -10,6 +10,7 @@ NotesDSS::NotesDSS(QWidget *parent) :
     connectDB();
     connect(ui->aUnits, SIGNAL(triggered()), this, SLOT(unitsWidget()));
     connect(ui->aFirms, SIGNAL(triggered()), this, SLOT(firmsWidget()));
+    connect(ui->aPeople, SIGNAL(triggered()), this, SLOT(peopleWidget()));
 }
 
 NotesDSS::~NotesDSS()
@@ -96,3 +97,7 @@ void NotesDSS::firmsWidget(){
     openWidget("Контрагенты", f);
 }
 
+void NotesDSS::peopleWidget(){
+    people *p = new people(this);
+    openWidget("Сотрудники", p);
+}

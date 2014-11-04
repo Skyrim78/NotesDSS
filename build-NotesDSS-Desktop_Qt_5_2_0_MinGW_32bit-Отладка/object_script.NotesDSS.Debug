@@ -1,0 +1,13 @@
+INPUT(
+./debug\main.o
+./debug\notesdss.o
+./debug\units.o
+./debug\firms.o
+./debug\columnEditor.o
+./debug\people.o
+./debug\moc_notesdss.o
+./debug\moc_units.o
+./debug\moc_firms.o
+./debug\moc_columnEditor.o
+./debug\moc_people.o
+);

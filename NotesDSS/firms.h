@@ -4,6 +4,8 @@
 #include "ui_firms.h"
 #include <QtSql/QtSql>
 #include <QtXml/QtXml>
+#include <QMenu>
+#include <QContextMenuEvent>
 //--------------
 #include "columnEditor.h"
 
@@ -17,7 +19,16 @@ public:
     int id;
     int crow;
 
+    QMenu *cMenu;
+    QAction *columnEditor;
+    QAction *addFirm;
+    QAction *editFirm;
+    QAction *deleteFirm;
+
     virtual void closeEvent(QCloseEvent *);
+
+protected slots:
+    virtual void contextMenuEvent(QContextMenuEvent *event);
 
 public slots:
     void readSetting();

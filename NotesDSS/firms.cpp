@@ -18,6 +18,9 @@ firms::firms(QWidget *parent):QWidget(parent){
     connect(ui.tableWidget_firms, SIGNAL(doubleClicked(QModelIndex)), this, SLOT(editFirms()));
     connect(ui.pushButton_save, SIGNAL(clicked()), this, SLOT(saveFirms()));
     connect(ui.pushButton_close, SIGNAL(clicked()), ui.groupBox_form, SLOT(hide()));
+
+    ui.tableWidget_firms->setContextMenuPolicy(Qt::DefaultContextMenu);
+
 }
 
 void firms::closeEvent(QCloseEvent *){
@@ -94,6 +97,41 @@ void firms::loadFirms(){
     ui.tableWidget_firms->horizontalHeader()->setStretchLastSection(true);
 
 }
+void firms::contextMenuEvent(QContextMenuEvent *event){
+    if (ui.tableWidget_firms->rowCount() > 0){
+        int row = -1;
+        for (int r = 0; r < ui.tableWidget_firms->rowCount(); r++){
+            if (ui.tableWidget_firms->item(r, 0)->isSelected()){
+                row = r;
+            }
+        }
+        if (row == -1){
+            crow = 0;
+        } else {
+            crow = row;
+        }
+        id = ui.tableWidget_firms->item(crow, 0)->text().toInt();
+        cMenu = new QMenu(this);
+        addFirm = new QAction("Добавить", this);
+        cMenu->addAction(addFirm);
+        connect(addFirm, SIGNAL(triggered()), this, SLOT(addFirms()));
+
+        editFirm = new QAction("Редактировать", this);
+        cMenu->addAction(editFirm);
+        connect(editFirm, SIGNAL(triggered()), this, SLOT(editFirms()));
+
+        deleteFirm = new QAction("Удалить", this);
+        cMenu->addAction(deleteFirm);
+        connect(deleteFirm, SIGNAL(triggered()), this, SLOT(delFirms()));
+
+        cMenu->addSeparator();
+        columnEditor = new QAction("Настроить список", this);
+        cMenu->addAction(columnEditor);
+        connect(columnEditor, SIGNAL(triggered()), this, SLOT(makeColumns()));
+
+        cMenu->exec(event->globalPos());
+    }
+}
 
 void firms::makeStatus(const QString text){
     ui.label_status->setText(text);
@@ -110,6 +148,8 @@ void firms::makeColumns(){
 }
 
 void firms::addFirms(){
+    id = 0;
+
     ui.groupBox_form->setVisible(true);
     ui.lineEdit_name->clear();
     ui.lineEdit_inn->clear();
@@ -125,9 +165,10 @@ void firms::addFirms(){
     ui.lineEdit_name->setFocus();
 }
 
-void firms::editFirms(){
+void firms::editFirms(){    
     crow = ui.tableWidget_firms->currentRow();
     id = ui.tableWidget_firms->item(crow, 0)->text().toInt();
+
     QSqlQuery query(QString("select firm.inn, firm.name, firm.address, firm.phone, firm.email, "
                             "firm.face, firm.bank, firm.rs, firm.mfo, firm.note "
                             "from firm "
@@ -142,34 +183,43 @@ void firms::editFirms(){
     ui.lineEdit_bank->setText(query.value(6).toString());
     ui.lineEdit_rs->setText(query.value(7).toString());
     ui.lineEdit_okpo->setText(query.value(8).toString());
+    ui.textEdit_note->setPlainText(query.value(9).toString());
     ui.lineEdit_inn->setFocus();
     ui.groupBox_form->setVisible(true);
 }
 
 void firms::delFirms(){
-    crow = ui.tableWidget_firms->currentRow();
-    QString error;
-    if (id > 0){
-        int test = ui.tableWidget_firms->item(crow, 10)->text().toInt();
-        if (test > 0){
-            error.append("Невозможно удалить используемого контрагента!");
-        } else {
-
-            QSqlQuery query(QString("delete from firm where firm.id = \'%1\' ")
-                            .arg(ui.tableWidget_firms->item(crow, 0)->text()));
-            query.exec();
-            error.append(query.lastError().text());
+    if (ui.tableWidget_firms->rowCount() > 0){
+        QString error;
+        crow = -1;
+        for (int r = 0; r < ui.tableWidget_firms->rowCount(); r++){
+            if (ui.tableWidget_firms->item(r, 0)->isSelected()){
+                crow = r;
+            }
         }
-    } else {
-        error.append("Выберите контрагента!");
+        if (crow > -1){
+            int test = ui.tableWidget_firms->item(crow, 10)->text().toInt();
+            if (test > 0){
+                error.append("Невозможно удалить используемого контрагента!");
+            } else {
+
+                QSqlQuery query(QString("delete from firm where firm.id = \'%1\' ")
+                                .arg(ui.tableWidget_firms->item(crow, 0)->text()));
+                query.exec();
+                error.append(query.lastError().text());
+            }
+        } else {
+            error.append("Выберите контрагента!");
+        }
+        if (error.size() > 3){
+            makeStatus(error);
+        } else {
+            makeStatus("Удалено!");
+            ui.groupBox_form->hide();
+            loadFirms();
+        }
     }
-    if (error.size() > 3){
-        makeStatus(error);
-    } else {
-        makeStatus("Удалено!");
-        ui.groupBox_form->hide();
-        loadFirms();
-    }
+
 }
 
 void firms::saveFirms(){

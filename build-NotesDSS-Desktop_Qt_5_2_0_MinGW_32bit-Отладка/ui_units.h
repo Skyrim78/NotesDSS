@@ -36,10 +36,10 @@ public:
     QHBoxLayout *horizontalLayout_3;
     QGroupBox *groupBox_menu;
     QGridLayout *gridLayout;
-    QToolButton *toolButton_update;
     QToolButton *toolButton_add;
     QToolButton *toolButton_del;
     QSpacerItem *verticalSpacer;
+    QToolButton *toolButton_update;
     QVBoxLayout *verticalLayout_2;
     QGroupBox *groupBox_units;
     QGridLayout *gridLayout_2;
@@ -70,13 +70,6 @@ public:
         groupBox_menu->setObjectName(QStringLiteral("groupBox_menu"));
         gridLayout = new QGridLayout(groupBox_menu);
         gridLayout->setObjectName(QStringLiteral("gridLayout"));
-        toolButton_update = new QToolButton(groupBox_menu);
-        toolButton_update->setObjectName(QStringLiteral("toolButton_update"));
-        toolButton_update->setMinimumSize(QSize(30, 30));
-        toolButton_update->setMaximumSize(QSize(30, 30));
-
-        gridLayout->addWidget(toolButton_update, 0, 0, 1, 1);
-
         toolButton_add = new QToolButton(groupBox_menu);
         toolButton_add->setObjectName(QStringLiteral("toolButton_add"));
         toolButton_add->setMinimumSize(QSize(30, 30));
@@ -93,7 +86,14 @@ public:
 
         verticalSpacer = new QSpacerItem(20, 306, QSizePolicy::Minimum, QSizePolicy::Expanding);
 
-        gridLayout->addItem(verticalSpacer, 3, 0, 1, 1);
+        gridLayout->addItem(verticalSpacer, 4, 0, 1, 1);
+
+        toolButton_update = new QToolButton(groupBox_menu);
+        toolButton_update->setObjectName(QStringLiteral("toolButton_update"));
+        toolButton_update->setMinimumSize(QSize(30, 30));
+        toolButton_update->setMaximumSize(QSize(30, 30));
+
+        gridLayout->addWidget(toolButton_update, 3, 0, 1, 1);
 
 
         horizontalLayout_3->addWidget(groupBox_menu);
@@ -207,9 +207,9 @@ public:
     {
         units->setWindowTitle(QApplication::translate("units", "Form", 0));
         groupBox_menu->setTitle(QString());
-        toolButton_update->setText(QApplication::translate("units", "U", 0));
         toolButton_add->setText(QApplication::translate("units", "+", 0));
         toolButton_del->setText(QApplication::translate("units", "-", 0));
+        toolButton_update->setText(QApplication::translate("units", "U", 0));
         groupBox_units->setTitle(QString());
         label->setText(QApplication::translate("units", "\320\235\320\260\320\270\320\274\320\265\320\275\320\276\320\262\320\260\320\275\320\270\320\265:", 0));
         pushButton_save->setText(QApplication::translate("units", "\320\241\320\276\321\205\321\200\320\260\320\275\320\270\321\202\321\214", 0));

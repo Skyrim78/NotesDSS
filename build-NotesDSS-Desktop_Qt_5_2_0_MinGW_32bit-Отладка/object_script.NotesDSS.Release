@@ -1,0 +1,13 @@
+INPUT(
+./release\main.o
+./release\notesdss.o
+./release\units.o
+./release\firms.o
+./release\columnEditor.o
+./release\people.o
+./release\moc_notesdss.o
+./release\moc_units.o
+./release\moc_firms.o
+./release\moc_columnEditor.o
+./release\moc_people.o
+);
