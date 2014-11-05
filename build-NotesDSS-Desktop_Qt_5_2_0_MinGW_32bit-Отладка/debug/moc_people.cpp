@@ -60,16 +60,16 @@ static const uint qt_meta_data_people[] = {
 
  // slots: name, argc, parameters, tag, flags
        1,    1,   49,    2, 0x0a,
-       4,    1,   52,    2, 0x0a,
-       5,    0,   55,    2, 0x0a,
-       6,    0,   56,    2, 0x0a,
-       7,    0,   57,    2, 0x0a,
-       8,    0,   58,    2, 0x0a,
-       9,    0,   59,    2, 0x0a,
+       4,    0,   52,    2, 0x0a,
+       5,    0,   53,    2, 0x0a,
+       6,    0,   54,    2, 0x0a,
+       7,    0,   55,    2, 0x0a,
+       8,    0,   56,    2, 0x0a,
+       9,    0,   57,    2, 0x0a,
 
  // slots: parameters
     QMetaType::Void, QMetaType::QString,    3,
-    QMetaType::Void, QMetaType::QString,    3,
+    QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
@@ -85,7 +85,7 @@ void people::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void
         people *_t = static_cast<people *>(_o);
         switch (_id) {
         case 0: _t->makeStatus((*reinterpret_cast< const QString(*)>(_a[1]))); break;
-        case 1: _t->makeFace((*reinterpret_cast< const QString(*)>(_a[1]))); break;
+        case 1: _t->makeFace(); break;
         case 2: _t->add(); break;
         case 3: _t->edit(); break;
         case 4: _t->del(); break;

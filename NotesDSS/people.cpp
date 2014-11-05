@@ -3,8 +3,8 @@
 people::people(QWidget *parent):QWidget(parent){
     ui.setupUi(this);
     ui.groupBox_card->hide();
-    ui.tableWidget_people->setColumnHidden(0, true);
-    ui.tableWidget_people->setColumnHidden(2, true);
+    //ui.tableWidget_people->setColumnHidden(0, true);
+   // ui.tableWidget_people->setColumnHidden(2, true);
     id = 0;
     crow = 0;
 
@@ -25,9 +25,10 @@ void people::load(){
     for (int r = ui.tableWidget_people->rowCount(); r >= 0; r--){
         ui.tableWidget_people->removeRow(r);
     }
-    QSqlQuery query("select face.id, face.face, (select Count(people.id) from people where people.face = face.id) "
-                    "from face"
-                    "order by face.face");
+    QSqlQuery query("select people.id, people.face, "
+                    "(select Count(treb.id) from treb where treb.face = people.id) "
+                    "from people "
+                    "order by people.face");
     int row = 0;
     while (query.next()){
         ui.tableWidget_people->insertRow(row);
@@ -57,9 +58,9 @@ void people::edit(){
     crow = ui.tableWidget_people->currentRow();
     id = ui.tableWidget_people->item(crow, 0)->text().toInt();
 
-    QSqlQuery query(QString("select face.fam, face.name, face.otc, face.face "
-                            "from face "
-                            "where face.id = \'%1\' ").arg(id));
+    QSqlQuery query(QString("select people.fam, people.name, people.otc, people.face "
+                            "from people "
+                            "where people.id = \'%1\' ").arg(id));
     query.next();
     ui.lineEdit_fam->setText(query.value(0).toString());
     ui.lineEdit_name->setText(query.value(1).toString());
@@ -67,6 +68,7 @@ void people::edit(){
     ui.lineEdit_face->setText(query.value(3).toString());
 
     ui.lineEdit_fam->setFocus();
+    ui.groupBox_card->setVisible(true);
 }
 
 void people::makeFace(){
@@ -89,13 +91,80 @@ void people::makeFace(){
 }
 
 void people::save(){
-
+    QString error;
+    if (ui.lineEdit_face->text().isEmpty()){
+        error.append("Введите данные сотрудника!");
+    } else {
+        if (id == 0){
+            QSqlQuery query("insert into people (fam, name, otc, face) "
+                            "values (?, ?, ?, ?) ");
+            query.bindValue(0, ui.lineEdit_fam->text());
+            query.bindValue(1, ui.lineEdit_name->text());
+            query.bindValue(2, ui.lineEdit_otc->text());
+            query.bindValue(3, ui.lineEdit_face->text());
+            query.exec();
+            error.append(query.lastError().text());
+        } else if (id > 0){
+            QSqlQuery query(QString("update people set fam = \'%1\', name = \'%2\', otc=\'%3\', face = \'%4\' "
+                                    "where people.id = \'%5\' ")
+                            .arg(ui.lineEdit_fam->text())
+                            .arg(ui.lineEdit_name->text())
+                            .arg(ui.lineEdit_otc->text())
+                            .arg(ui.lineEdit_face->text())
+                            .arg(id));
+            query.exec();
+            error.append(query.lastError().text());
+        }
+    }
+    if (error.size() > 2){
+        makeStatus(error);
+    } else {
+        makeStatus("Сохранено!");
+        load();
+        add();
+    }
 }
 
 void people::del(){
+    QString error;
+    if (ui.tableWidget_people->rowCount() > 0){
+        crow = -1;
+        for (int r = 0; r < ui.tableWidget_people->rowCount(); r++){
+            if (ui.tableWidget_people->item(r, 0)->isSelected()){
+                crow = r;
+                id = ui.tableWidget_people->item(crow, 0)->text().toInt();
+                break;
+            }
+        }
+        if (crow == -1){
+            error.append("Выберите сотрудника!");
+        } else if (crow > -1){
+            int test = ui.tableWidget_people->item(crow, 2)->text().toInt();
+            if (test == 0){
+                QSqlQuery query(QString("delete from people where people.id = \'%1\'")
+                                .arg(id));
+                query.exec();
+                error.append(query.lastError().text());
+            } else {
+                error.append("Данного сотрудника удалить нельзя!");
+            }
+        }
+    } else {
+        error.append("Нет сотрудников для удаления!");
+    }
+    if (error.size() > 2){
+        makeStatus(error);
+    } else {
+        makeStatus(QString("Сотрудник (id:%1) удален!").arg(id));
+        ui.groupBox_card->hide();
+        load();
+    }
 
 }
 
 void people::makeStatus(const QString text){
-
+    ui.label_status->setText(text);
+    QTimer *timer = new QTimer(this);
+    connect(timer, SIGNAL(timeout()), ui.label_status, SLOT(clear()));
+    timer->start(10000);
 }

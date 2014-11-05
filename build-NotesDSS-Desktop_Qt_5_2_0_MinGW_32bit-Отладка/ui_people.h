@@ -57,7 +57,7 @@ public:
     QPushButton *pushButton_save;
     QPushButton *pushButton_close;
     QTableWidget *tableWidget_people;
-    QLineEdit *lineEdit_status;
+    QLabel *label_status;
 
     void setupUi(QWidget *people)
     {
@@ -150,6 +150,9 @@ public:
 
         lineEdit_face = new QLineEdit(groupBox_card);
         lineEdit_face->setObjectName(QStringLiteral("lineEdit_face"));
+        lineEdit_face->setMaximumSize(QSize(150, 16777215));
+        lineEdit_face->setFocusPolicy(Qt::NoFocus);
+        lineEdit_face->setReadOnly(true);
 
         horizontalLayout_2->addWidget(lineEdit_face);
 
@@ -199,10 +202,15 @@ public:
 
         verticalLayout_3->addLayout(horizontalLayout_3);
 
-        lineEdit_status = new QLineEdit(people);
-        lineEdit_status->setObjectName(QStringLiteral("lineEdit_status"));
+        label_status = new QLabel(people);
+        label_status->setObjectName(QStringLiteral("label_status"));
+        QFont font;
+        font.setBold(true);
+        font.setWeight(75);
+        label_status->setFont(font);
+        label_status->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
-        verticalLayout_3->addWidget(lineEdit_status);
+        verticalLayout_3->addWidget(label_status);
 
 
         gridLayout_3->addLayout(verticalLayout_3, 0, 0, 1, 1);
@@ -232,6 +240,7 @@ public:
         ___qtablewidgetitem1->setText(QApplication::translate("people", "\320\244\320\260\320\274\320\270\320\273\320\270\321\217 \320\230\320\274\321\217 \320\236\321\202\321\207\320\265\321\201\321\202\320\262\320\276", 0));
         QTableWidgetItem *___qtablewidgetitem2 = tableWidget_people->horizontalHeaderItem(2);
         ___qtablewidgetitem2->setText(QApplication::translate("people", "docs", 0));
+        label_status->setText(QString());
     } // retranslateUi
 
 };
