@@ -23,12 +23,10 @@ HEADERS  += notesdss.h \
     units.h \
     firms.h \
     columnEditor.h \
-    people.h \
-    material.h
+    people.h
 
 FORMS    += notesdss.ui \
     units.ui \
     firms.ui \
     columnsEditor.ui \
-    people.ui \
-    material.ui
+    people.ui

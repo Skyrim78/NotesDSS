@@ -92,7 +92,7 @@ DESTDIR_TARGET = release\NotesDSS.exe
 first: all
 all: Makefile.Release  $(DESTDIR_TARGET)
 
-$(DESTDIR_TARGET): ui_notesdss.h ui_units.h ui_firms.h ui_columnsEditor.h ui_people.h ui_material.h $(OBJECTS) 
+$(DESTDIR_TARGET): ui_notesdss.h ui_units.h ui_firms.h ui_columnsEditor.h ui_people.h $(OBJECTS) 
 	$(LINKER) $(LFLAGS) -o $(DESTDIR_TARGET) object_script.NotesDSS.Release  $(LIBS)
 
 qmake: FORCE
@@ -1377,9 +1377,9 @@ release/moc_people.cpp: ui_people.h \
 
 compiler_moc_source_make_all:
 compiler_moc_source_clean:
-compiler_uic_make_all: ui_notesdss.h ui_units.h ui_firms.h ui_columnsEditor.h ui_people.h ui_material.h
+compiler_uic_make_all: ui_notesdss.h ui_units.h ui_firms.h ui_columnsEditor.h ui_people.h
 compiler_uic_clean:
-	-$(DEL_FILE) ui_notesdss.h ui_units.h ui_firms.h ui_columnsEditor.h ui_people.h ui_material.h
+	-$(DEL_FILE) ui_notesdss.h ui_units.h ui_firms.h ui_columnsEditor.h ui_people.h
 ui_notesdss.h: ../NotesDSS/notesdss.ui
 	C:\myQt\5.2.0\mingw48_32\bin\uic.exe ..\NotesDSS\notesdss.ui -o ui_notesdss.h
 
@@ -1394,9 +1394,6 @@ ui_columnsEditor.h: ../NotesDSS/columnsEditor.ui
 
 ui_people.h: ../NotesDSS/people.ui
 	C:\myQt\5.2.0\mingw48_32\bin\uic.exe ..\NotesDSS\people.ui -o ui_people.h
-
-ui_material.h: ../NotesDSS/material.ui
-	C:\myQt\5.2.0\mingw48_32\bin\uic.exe ..\NotesDSS\material.ui -o ui_material.h
 
 compiler_yacc_decl_make_all:
 compiler_yacc_decl_clean:
