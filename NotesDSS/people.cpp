@@ -3,8 +3,8 @@
 people::people(QWidget *parent):QWidget(parent){
     ui.setupUi(this);
     ui.groupBox_card->hide();
-    //ui.tableWidget_people->setColumnHidden(0, true);
-   // ui.tableWidget_people->setColumnHidden(2, true);
+    ui.tableWidget_people->setColumnHidden(0, true);
+    ui.tableWidget_people->setColumnHidden(2, true);
     id = 0;
     crow = 0;
 
