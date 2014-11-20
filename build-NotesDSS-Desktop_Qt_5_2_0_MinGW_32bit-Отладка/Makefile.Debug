@@ -48,22 +48,26 @@ SOURCES       = ..\NotesDSS\main.cpp \
 		..\NotesDSS\units.cpp \
 		..\NotesDSS\firms.cpp \
 		..\NotesDSS\columnEditor.cpp \
-		..\NotesDSS\people.cpp debug\moc_notesdss.cpp \
+		..\NotesDSS\people.cpp \
+		..\NotesDSS\material.cpp debug\moc_notesdss.cpp \
 		debug\moc_units.cpp \
 		debug\moc_firms.cpp \
 		debug\moc_columnEditor.cpp \
-		debug\moc_people.cpp
+		debug\moc_people.cpp \
+		debug\moc_material.cpp
 OBJECTS       = debug/main.o \
 		debug/notesdss.o \
 		debug/units.o \
 		debug/firms.o \
 		debug/columnEditor.o \
 		debug/people.o \
+		debug/material.o \
 		debug/moc_notesdss.o \
 		debug/moc_units.o \
 		debug/moc_firms.o \
 		debug/moc_columnEditor.o \
-		debug/moc_people.o
+		debug/moc_people.o \
+		debug/moc_material.o
 
 DIST          = 
 QMAKE_TARGET  = NotesDSS
@@ -104,7 +108,7 @@ dist:
 	$(ZIP) NotesDSS.zip $(SOURCES) $(DIST) ..\NotesDSS\NotesDSS.pro C:\myQt\5.2.0\mingw48_32\mkspecs\features\spec_pre.prf C:\myQt\5.2.0\mingw48_32\mkspecs\qdevice.pri C:\myQt\5.2.0\mingw48_32\mkspecs\features\device_config.prf C:\myQt\5.2.0\mingw48_32\mkspecs\common\shell-win32.conf C:\myQt\5.2.0\mingw48_32\mkspecs\qconfig.pri C:\myQt\5.2.0\mingw48_32\mkspecs\modules\qt_lib_axbase.pri C:\myQt\5.2.0\mingw48_32\mkspecs\modules\qt_lib_axbase_private.pri C:\myQt\5.2.0\mingw48_32\mkspecs\modules\qt_lib_axcontainer.pri C:\myQt\5.2.0\mingw48_32\mkspecs\modules\qt_lib_axcontainer_private.pri C:\myQt\5.2.0\mingw48_32\mkspecs\modules\qt_lib_axserver.pri C:\myQt\5.2.0\mingw48_32\mkspecs\modules\qt_lib_axserver_private.pri C:\myQt\5.2.0\mingw48_32\mkspecs\modules\qt_lib_bluetooth.pri C:\myQt\5.2.0\mingw48_32\mkspecs\modules\qt_lib_bluetooth_private.pri C:\myQt\5.2.0\mingw48_32\mkspecs\modules\qt_lib_bootstrap_private.pri C:\myQt\5.2.0\mingw48_32\mkspecs\modules\qt_lib_clucene_private.pri C:\myQt\5.2.0\mingw48_32\mkspecs\modules\qt_lib_concurrent.pri C:\myQt\5.2.0\mingw48_32\mkspecs\modules\qt_lib_concurrent_private.pri C:\myQt\5.2.0\mingw48_32\mkspecs\modules\qt_lib_core.pri C:\myQt\5.2.0\mingw48_32\mkspecs\modules\qt_lib_core_private.pri C:\myQt\5.2.0\mingw48_32\mkspecs\modules\qt_lib_declarative.pri C:\myQt\5.2.0\mingw48_32\mkspecs\modules\qt_lib_declarative_private.pri C:\myQt\5.2.0\mingw48_32\mkspecs\modules\qt_lib_designer.pri C:\myQt\5.2.0\mingw48_32\mkspecs\modules\qt_lib_designer_private.pri C:\myQt\5.2.0\mingw48_32\mkspecs\modules\qt_lib_designercomponents_private.pri C:\myQt\5.2.0\mingw48_32\mkspecs\modules\qt_lib_gui.pri C:\myQt\5.2.0\mingw48_32\mkspecs\modules\qt_lib_gui_private.pri C:\myQt\5.2.0\mingw48_32\mkspecs\modules\qt_lib_help.pri C:\myQt\5.2.0\mingw48_32\mkspecs\modules\qt_lib_help_private.pri C:\myQt\5.2.0\mingw48_32\mkspecs\modules\qt_lib_multimedia.pri C:\myQt\5.2.0\mingw48_32\mkspecs\modules\qt_lib_multimedia_private.pri C:\myQt\5.2.0\mingw48_32\mkspecs\modules\qt_lib_multimediawidgets.pri C:\myQt\5.2.0\mingw48_32\mkspecs\modules\qt_lib_multimediawidgets_private.pri C:\myQt\5.2.0\mingw48_32\mkspecs\modules\qt_lib_network.pri C:\myQt\5.2.0\mingw48_32\mkspecs\modules\qt_lib_network_private.pri C:\myQt\5.2.0\mingw48_32\mkspecs\modules\qt_lib_nfc.pri C:\myQt\5.2.0\mingw48_32\mkspecs\modules\qt_lib_nfc_private.pri C:\myQt\5.2.0\mingw48_32\mkspecs\modules\qt_lib_opengl.pri C:\myQt\5.2.0\mingw48_32\mkspecs\modules\qt_lib_opengl_private.pri C:\myQt\5.2.0\mingw48_32\mkspecs\modules\qt_lib_openglextensions.pri C:\myQt\5.2.0\mingw48_32\mkspecs\modules\qt_lib_openglextensions_private.pri C:\myQt\5.2.0\mingw48_32\mkspecs\modules\qt_lib_platformsupport_private.pri C:\myQt\5.2.0\mingw48_32\mkspecs\modules\qt_lib_positioning.pri C:\myQt\5.2.0\mingw48_32\mkspecs\modules\qt_lib_positioning_private.pri C:\myQt\5.2.0\mingw48_32\mkspecs\modules\qt_lib_printsupport.pri C:\myQt\5.2.0\mingw48_32\mkspecs\modules\qt_lib_printsupport_private.pri C:\myQt\5.2.0\mingw48_32\mkspecs\modules\qt_lib_qml.pri C:\myQt\5.2.0\mingw48_32\mkspecs\modules\qt_lib_qml_private.pri C:\myQt\5.2.0\mingw48_32\mkspecs\modules\qt_lib_qmldevtools_private.pri C:\myQt\5.2.0\mingw48_32\mkspecs\modules\qt_lib_qmltest.pri C:\myQt\5.2.0\mingw48_32\mkspecs\modules\qt_lib_qmltest_private.pri C:\myQt\5.2.0\mingw48_32\mkspecs\modules\qt_lib_qtmultimediaquicktools_private.pri C:\myQt\5.2.0\mingw48_32\mkspecs\modules\qt_lib_quick.pri C:\myQt\5.2.0\mingw48_32\mkspecs\modules\qt_lib_quick_private.pri C:\myQt\5.2.0\mingw48_32\mkspecs\modules\qt_lib_quickparticles_private.pri C:\myQt\5.2.0\mingw48_32\mkspecs\modules\qt_lib_script.pri C:\myQt\5.2.0\mingw48_32\mkspecs\modules\qt_lib_script_private.pri C:\myQt\5.2.0\mingw48_32\mkspecs\modules\qt_lib_scripttools.pri C:\myQt\5.2.0\mingw48_32\mkspecs\modules\qt_lib_scripttools_private.pri C:\myQt\5.2.0\mingw48_32\mkspecs\modules\qt_lib_sensors.pri C:\myQt\5.2.0\mingw48_32\mkspecs\modules\qt_lib_sensors_private.pri C:\myQt\5.2.0\mingw48_32\mkspecs\modules\qt_lib_serialport.pri C:\myQt\5.2.0\mingw48_32\mkspecs\modules\qt_lib_serialport_private.pri C:\myQt\5.2.0\mingw48_32\mkspecs\modules\qt_lib_sql.pri C:\myQt\5.2.0\mingw48_32\mkspecs\modules\qt_lib_sql_private.pri C:\myQt\5.2.0\mingw48_32\mkspecs\modules\qt_lib_svg.pri C:\myQt\5.2.0\mingw48_32\mkspecs\modules\qt_lib_svg_private.pri C:\myQt\5.2.0\mingw48_32\mkspecs\modules\qt_lib_testlib.pri C:\myQt\5.2.0\mingw48_32\mkspecs\modules\qt_lib_testlib_private.pri C:\myQt\5.2.0\mingw48_32\mkspecs\modules\qt_lib_uitools.pri C:\myQt\5.2.0\mingw48_32\mkspecs\modules\qt_lib_uitools_private.pri C:\myQt\5.2.0\mingw48_32\mkspecs\modules\qt_lib_webkit.pri C:\myQt\5.2.0\mingw48_32\mkspecs\modules\qt_lib_webkit_private.pri C:\myQt\5.2.0\mingw48_32\mkspecs\modules\qt_lib_webkitwidgets.pri C:\myQt\5.2.0\mingw48_32\mkspecs\modules\qt_lib_webkitwidgets_private.pri C:\myQt\5.2.0\mingw48_32\mkspecs\modules\qt_lib_widgets.pri C:\myQt\5.2.0\mingw48_32\mkspecs\modules\qt_lib_widgets_private.pri C:\myQt\5.2.0\mingw48_32\mkspecs\modules\qt_lib_winextras.pri C:\myQt\5.2.0\mingw48_32\mkspecs\modules\qt_lib_winextras_private.pri C:\myQt\5.2.0\mingw48_32\mkspecs\modules\qt_lib_xml.pri C:\myQt\5.2.0\mingw48_32\mkspecs\modules\qt_lib_xml_private.pri C:\myQt\5.2.0\mingw48_32\mkspecs\modules\qt_lib_xmlpatterns.pri C:\myQt\5.2.0\mingw48_32\mkspecs\modules\qt_lib_xmlpatterns_private.pri C:\myQt\5.2.0\mingw48_32\mkspecs\features\qt_functions.prf C:\myQt\5.2.0\mingw48_32\mkspecs\features\qt_config.prf C:\myQt\5.2.0\mingw48_32\mkspecs\win32-g++\qmake.conf C:\myQt\5.2.0\mingw48_32\mkspecs\features\spec_post.prf C:\myQt\5.2.0\mingw48_32\mkspecs\features\exclusive_builds.prf C:\myQt\5.2.0\mingw48_32\mkspecs\features\default_pre.prf C:\myQt\5.2.0\mingw48_32\mkspecs\features\win32\default_pre.prf C:\myQt\5.2.0\mingw48_32\mkspecs\features\resolve_config.prf C:\myQt\5.2.0\mingw48_32\mkspecs\features\exclusive_builds_post.prf C:\myQt\5.2.0\mingw48_32\mkspecs\features\default_post.prf C:\myQt\5.2.0\mingw48_32\mkspecs\features\build_pass.prf C:\myQt\5.2.0\mingw48_32\mkspecs\features\qml_debug.prf C:\myQt\5.2.0\mingw48_32\mkspecs\features\declarative_debug.prf C:\myQt\5.2.0\mingw48_32\mkspecs\features\win32\rtti.prf C:\myQt\5.2.0\mingw48_32\mkspecs\features\warn_on.prf C:\myQt\5.2.0\mingw48_32\mkspecs\features\qt.prf C:\myQt\5.2.0\mingw48_32\mkspecs\features\resources.prf C:\myQt\5.2.0\mingw48_32\mkspecs\features\moc.prf C:\myQt\5.2.0\mingw48_32\mkspecs\features\win32\opengl.prf C:\myQt\5.2.0\mingw48_32\mkspecs\features\uic.prf C:\myQt\5.2.0\mingw48_32\mkspecs\features\win32\windows.prf C:\myQt\5.2.0\mingw48_32\mkspecs\features\testcase_targets.prf C:\myQt\5.2.0\mingw48_32\mkspecs\features\exceptions.prf C:\myQt\5.2.0\mingw48_32\mkspecs\features\yacc.prf C:\myQt\5.2.0\mingw48_32\mkspecs\features\lex.prf ..\NotesDSS\NotesDSS.pro C:/myQt/5.2.0/mingw48_32/lib/Qt5Widgetsd.prl C:/myQt/5.2.0/mingw48_32/lib/Qt5Xmld.prl C:/myQt/5.2.0/mingw48_32/lib/Qt5Sqld.prl C:/myQt/5.2.0/mingw48_32/lib/Qt5Guid.prl C:/myQt/5.2.0/mingw48_32/lib/Qt5Cored.prl  RESOURCES HEADERS SOURCES OBJECTIVE_SOURCES FORMS YACCSOURCES YACCSOURCES LEXSOURCES 
 
 clean: compiler_clean 
-	-$(DEL_FILE) debug\main.o debug\notesdss.o debug\units.o debug\firms.o debug\columnEditor.o debug\people.o debug\moc_notesdss.o debug\moc_units.o debug\moc_firms.o debug\moc_columnEditor.o debug\moc_people.o
+	-$(DEL_FILE) debug\main.o debug\notesdss.o debug\units.o debug\firms.o debug\columnEditor.o debug\people.o debug\material.o debug\moc_notesdss.o debug\moc_units.o debug\moc_firms.o debug\moc_columnEditor.o debug\moc_people.o debug\moc_material.o
 
 distclean: clean
 	-$(DEL_FILE) $(DESTDIR_TARGET)
@@ -118,9 +122,9 @@ check: first
 
 compiler_rcc_make_all:
 compiler_rcc_clean:
-compiler_moc_header_make_all: debug/moc_notesdss.cpp debug/moc_units.cpp debug/moc_firms.cpp debug/moc_columnEditor.cpp debug/moc_people.cpp
+compiler_moc_header_make_all: debug/moc_notesdss.cpp debug/moc_units.cpp debug/moc_firms.cpp debug/moc_columnEditor.cpp debug/moc_people.cpp debug/moc_material.cpp
 compiler_moc_header_clean:
-	-$(DEL_FILE) debug\moc_notesdss.cpp debug\moc_units.cpp debug\moc_firms.cpp debug\moc_columnEditor.cpp debug\moc_people.cpp
+	-$(DEL_FILE) debug\moc_notesdss.cpp debug\moc_units.cpp debug\moc_firms.cpp debug\moc_columnEditor.cpp debug\moc_people.cpp debug\moc_material.cpp
 debug/moc_notesdss.cpp: C:/myQt/5.2.0/mingw48_32/include/QtWidgets/QMainWindow \
 		C:/myQt/5.2.0/mingw48_32/include/QtWidgets/qmainwindow.h \
 		C:/myQt/5.2.0/mingw48_32/include/QtWidgets/qwidget.h \
@@ -394,6 +398,11 @@ debug/moc_notesdss.cpp: C:/myQt/5.2.0/mingw48_32/include/QtWidgets/QMainWindow \
 		ui_columnsEditor.h \
 		../NotesDSS/people.h \
 		ui_people.h \
+		../NotesDSS/material.h \
+		ui_material.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtWidgets/QFileDialog \
+		C:/myQt/5.2.0/mingw48_32/include/QtWidgets/qfiledialog.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtWidgets/qdialog.h \
 		../NotesDSS/notesdss.h
 	C:\myQt\5.2.0\mingw48_32\bin\moc.exe $(DEFINES) -D__GNUC__ -DWIN32 $(INCPATH) ..\NotesDSS\notesdss.h -o debug\moc_notesdss.cpp
 
@@ -1375,6 +1384,263 @@ debug/moc_people.cpp: ui_people.h \
 		../NotesDSS/people.h
 	C:\myQt\5.2.0\mingw48_32\bin\moc.exe $(DEFINES) -D__GNUC__ -DWIN32 $(INCPATH) ..\NotesDSS\people.h -o debug\moc_people.cpp
 
+debug/moc_material.cpp: ui_material.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtSql/QtSql \
+		C:/myQt/5.2.0/mingw48_32/include/QtSql/QtSqlDepends \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/QtCore \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/QtCoreDepends \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qabstractanimation.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qobject.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qobjectdefs.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qnamespace.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qglobal.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qconfig.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qfeatures.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qsystemdetection.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qprocessordetection.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qcompilerdetection.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qglobalstatic.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qatomic.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qbasicatomic.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qatomic_bootstrap.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qgenericatomic.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qatomic_msvc.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qatomic_integrity.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qoldbasicatomic.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qatomic_vxworks.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qatomic_power.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qatomic_alpha.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qatomic_armv7.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qatomic_armv6.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qatomic_armv5.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qatomic_bfin.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qatomic_ia64.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qatomic_mips.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qatomic_s390.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qatomic_sh4a.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qatomic_sparc.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qatomic_x86.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qatomic_cxx11.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qatomic_gcc.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qatomic_unix.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qmutex.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qlogging.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qflags.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qtypeinfo.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qtypetraits.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qsysinfo.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qobjectdefs_impl.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qstring.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qchar.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qbytearray.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qrefcount.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qarraydata.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qstringbuilder.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qlist.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qalgorithms.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qiterator.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qcoreevent.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qscopedpointer.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qmetatype.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qvarlengtharray.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qcontainerfwd.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qisenum.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qobject_impl.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qanimationgroup.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qparallelanimationgroup.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qpauseanimation.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qpropertyanimation.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qvariantanimation.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qeasingcurve.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qvector.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qpoint.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qvariant.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qmap.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qpair.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qdebug.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qhash.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qtextstream.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qiodevice.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qlocale.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qshareddata.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qset.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qcontiguouscache.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qstringlist.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qdatastream.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qregexp.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qstringmatcher.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qsequentialanimationgroup.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qtextcodec.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qendian.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qlibraryinfo.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qdatetime.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qsharedpointer.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qsharedpointer_impl.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qnumeric.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qbuffer.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qdir.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qfileinfo.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qfile.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qfiledevice.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qdiriterator.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qfileselector.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/QObject \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/QStringList \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qfilesystemwatcher.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qlockfile.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qloggingcategory.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qprocess.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qresource.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qsavefile.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qsettings.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qstandardpaths.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qtemporarydir.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/QScopedPointer \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qtemporaryfile.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qurl.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qurlquery.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qabstractitemmodel.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qabstractproxymodel.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qidentityproxymodel.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qitemselectionmodel.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qsortfilterproxymodel.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qstringlistmodel.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qjsonarray.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qjsonvalue.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qjsondocument.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qjsonobject.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qabstracteventdispatcher.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qeventloop.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qabstractnativeeventfilter.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qbasictimer.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qcoreapplication.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qmath.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qmetaobject.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qmimedata.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qobjectcleanuphandler.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qpointer.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qsharedmemory.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qsignalmapper.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qsocketnotifier.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qsystemsemaphore.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qtimer.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qtranslator.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qwineventnotifier.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qmimedatabase.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qmimetype.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qfactoryinterface.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qlibrary.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qplugin.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qpluginloader.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/quuid.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qabstractstate.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qabstracttransition.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qeventtransition.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qfinalstate.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qhistorystate.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qsignaltransition.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qstate.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qstatemachine.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qexception.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qfuture.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qfutureinterface.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qrunnable.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qresultstore.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qfuturesynchronizer.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qfuturewatcher.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qreadwritelock.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qsemaphore.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qthread.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qthreadpool.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qthreadstorage.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qwaitcondition.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qarraydataops.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qarraydatapointer.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qbitarray.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qbytearraymatcher.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qcache.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qcollator.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qcommandlineoption.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qcommandlineparser.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qcryptographichash.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qelapsedtimer.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qline.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qlinkedlist.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qmargins.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qrect.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qsize.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qmessageauthenticationcode.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qqueue.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qregularexpression.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qscopedvaluerollback.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qstack.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qtextboundaryfinder.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qtimeline.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qtimezone.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qxmlstream.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qtcoreversion.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtSql/qsql.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtSql/qsqldatabase.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtSql/qsqldriver.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtSql/qsqldriverplugin.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtSql/qsqlerror.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtSql/qsqlfield.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtSql/qsqlindex.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtSql/qsqlrecord.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtSql/qsqlquery.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtSql/qsqlresult.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtSql/qsqlquerymodel.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtSql/qsqlrelationaldelegate.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtWidgets/qitemdelegate.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtWidgets/qabstractitemdelegate.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtWidgets/qstyleoption.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtWidgets/qabstractspinbox.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtWidgets/qwidget.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtGui/qwindowdefs.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtGui/qwindowdefs_win.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtGui/qpaintdevice.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtGui/qpalette.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtGui/qcolor.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtGui/qrgb.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtGui/qbrush.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtGui/qmatrix.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtGui/qpolygon.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtGui/qregion.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtGui/qtransform.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtGui/qpainterpath.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtGui/qimage.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtGui/qpixmap.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtGui/qfont.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtGui/qfontmetrics.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtGui/qfontinfo.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtWidgets/qsizepolicy.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtGui/qcursor.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtGui/qkeysequence.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtGui/qevent.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtGui/qvector2d.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtGui/qtouchdevice.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtGui/qvalidator.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtGui/qicon.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtWidgets/qslider.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtWidgets/qabstractslider.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtWidgets/qstyle.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtWidgets/qtabbar.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtWidgets/qtabwidget.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtWidgets/qrubberband.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtWidgets/qframe.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtWidgets/qlistview.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtWidgets/qabstractitemview.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtWidgets/qabstractscrollarea.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtWidgets/qcombobox.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtSql/qsqlrelationaltablemodel.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtSql/qsqltablemodel.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtSql/qtsqlversion.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtWidgets/QFileDialog \
+		C:/myQt/5.2.0/mingw48_32/include/QtWidgets/qfiledialog.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtWidgets/qdialog.h \
+		../NotesDSS/material.h
+	C:\myQt\5.2.0\mingw48_32\bin\moc.exe $(DEFINES) -D__GNUC__ -DWIN32 $(INCPATH) ..\NotesDSS\material.h -o debug\moc_material.cpp
+
 compiler_moc_source_make_all:
 compiler_moc_source_clean:
 compiler_uic_make_all: ui_notesdss.h ui_units.h ui_firms.h ui_columnsEditor.h ui_people.h ui_material.h
@@ -1684,6 +1950,11 @@ debug/main.o: ../NotesDSS/main.cpp ../NotesDSS/notesdss.h \
 		ui_columnsEditor.h \
 		../NotesDSS/people.h \
 		ui_people.h \
+		../NotesDSS/material.h \
+		ui_material.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtWidgets/QFileDialog \
+		C:/myQt/5.2.0/mingw48_32/include/QtWidgets/qfiledialog.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtWidgets/qdialog.h \
 		C:/myQt/5.2.0/mingw48_32/include/QtWidgets/QApplication \
 		C:/myQt/5.2.0/mingw48_32/include/QtWidgets/qapplication.h \
 		C:/myQt/5.2.0/mingw48_32/include/QtWidgets/qdesktopwidget.h \
@@ -1966,6 +2237,11 @@ debug/notesdss.o: ../NotesDSS/notesdss.cpp ../NotesDSS/notesdss.h \
 		ui_columnsEditor.h \
 		../NotesDSS/people.h \
 		ui_people.h \
+		../NotesDSS/material.h \
+		ui_material.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtWidgets/QFileDialog \
+		C:/myQt/5.2.0/mingw48_32/include/QtWidgets/qfiledialog.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtWidgets/qdialog.h \
 		ui_notesdss.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\notesdss.o ..\NotesDSS\notesdss.cpp
 
@@ -2947,6 +3223,263 @@ debug/people.o: ../NotesDSS/people.cpp ../NotesDSS/people.h \
 		C:/myQt/5.2.0/mingw48_32/include/QtSql/qtsqlversion.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\people.o ..\NotesDSS\people.cpp
 
+debug/material.o: ../NotesDSS/material.cpp ../NotesDSS/material.h \
+		ui_material.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtSql/QtSql \
+		C:/myQt/5.2.0/mingw48_32/include/QtSql/QtSqlDepends \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/QtCore \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/QtCoreDepends \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qabstractanimation.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qobject.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qobjectdefs.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qnamespace.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qglobal.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qconfig.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qfeatures.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qsystemdetection.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qprocessordetection.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qcompilerdetection.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qglobalstatic.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qatomic.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qbasicatomic.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qatomic_bootstrap.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qgenericatomic.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qatomic_msvc.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qatomic_integrity.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qoldbasicatomic.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qatomic_vxworks.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qatomic_power.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qatomic_alpha.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qatomic_armv7.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qatomic_armv6.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qatomic_armv5.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qatomic_bfin.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qatomic_ia64.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qatomic_mips.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qatomic_s390.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qatomic_sh4a.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qatomic_sparc.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qatomic_x86.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qatomic_cxx11.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qatomic_gcc.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qatomic_unix.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qmutex.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qlogging.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qflags.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qtypeinfo.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qtypetraits.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qsysinfo.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qobjectdefs_impl.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qstring.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qchar.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qbytearray.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qrefcount.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qarraydata.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qstringbuilder.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qlist.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qalgorithms.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qiterator.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qcoreevent.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qscopedpointer.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qmetatype.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qvarlengtharray.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qcontainerfwd.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qisenum.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qobject_impl.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qanimationgroup.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qparallelanimationgroup.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qpauseanimation.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qpropertyanimation.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qvariantanimation.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qeasingcurve.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qvector.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qpoint.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qvariant.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qmap.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qpair.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qdebug.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qhash.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qtextstream.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qiodevice.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qlocale.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qshareddata.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qset.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qcontiguouscache.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qstringlist.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qdatastream.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qregexp.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qstringmatcher.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qsequentialanimationgroup.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qtextcodec.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qendian.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qlibraryinfo.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qdatetime.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qsharedpointer.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qsharedpointer_impl.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qnumeric.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qbuffer.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qdir.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qfileinfo.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qfile.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qfiledevice.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qdiriterator.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qfileselector.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/QObject \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/QStringList \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qfilesystemwatcher.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qlockfile.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qloggingcategory.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qprocess.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qresource.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qsavefile.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qsettings.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qstandardpaths.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qtemporarydir.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/QScopedPointer \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qtemporaryfile.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qurl.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qurlquery.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qabstractitemmodel.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qabstractproxymodel.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qidentityproxymodel.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qitemselectionmodel.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qsortfilterproxymodel.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qstringlistmodel.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qjsonarray.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qjsonvalue.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qjsondocument.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qjsonobject.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qabstracteventdispatcher.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qeventloop.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qabstractnativeeventfilter.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qbasictimer.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qcoreapplication.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qmath.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qmetaobject.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qmimedata.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qobjectcleanuphandler.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qpointer.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qsharedmemory.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qsignalmapper.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qsocketnotifier.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qsystemsemaphore.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qtimer.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qtranslator.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qwineventnotifier.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qmimedatabase.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qmimetype.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qfactoryinterface.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qlibrary.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qplugin.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qpluginloader.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/quuid.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qabstractstate.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qabstracttransition.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qeventtransition.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qfinalstate.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qhistorystate.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qsignaltransition.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qstate.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qstatemachine.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qexception.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qfuture.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qfutureinterface.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qrunnable.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qresultstore.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qfuturesynchronizer.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qfuturewatcher.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qreadwritelock.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qsemaphore.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qthread.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qthreadpool.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qthreadstorage.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qwaitcondition.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qarraydataops.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qarraydatapointer.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qbitarray.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qbytearraymatcher.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qcache.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qcollator.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qcommandlineoption.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qcommandlineparser.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qcryptographichash.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qelapsedtimer.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qline.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qlinkedlist.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qmargins.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qrect.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qsize.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qmessageauthenticationcode.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qqueue.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qregularexpression.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qscopedvaluerollback.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qstack.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qtextboundaryfinder.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qtimeline.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qtimezone.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qxmlstream.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtCore/qtcoreversion.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtSql/qsql.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtSql/qsqldatabase.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtSql/qsqldriver.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtSql/qsqldriverplugin.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtSql/qsqlerror.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtSql/qsqlfield.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtSql/qsqlindex.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtSql/qsqlrecord.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtSql/qsqlquery.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtSql/qsqlresult.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtSql/qsqlquerymodel.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtSql/qsqlrelationaldelegate.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtWidgets/qitemdelegate.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtWidgets/qabstractitemdelegate.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtWidgets/qstyleoption.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtWidgets/qabstractspinbox.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtWidgets/qwidget.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtGui/qwindowdefs.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtGui/qwindowdefs_win.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtGui/qpaintdevice.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtGui/qpalette.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtGui/qcolor.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtGui/qrgb.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtGui/qbrush.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtGui/qmatrix.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtGui/qpolygon.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtGui/qregion.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtGui/qtransform.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtGui/qpainterpath.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtGui/qimage.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtGui/qpixmap.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtGui/qfont.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtGui/qfontmetrics.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtGui/qfontinfo.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtWidgets/qsizepolicy.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtGui/qcursor.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtGui/qkeysequence.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtGui/qevent.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtGui/qvector2d.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtGui/qtouchdevice.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtGui/qvalidator.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtGui/qicon.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtWidgets/qslider.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtWidgets/qabstractslider.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtWidgets/qstyle.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtWidgets/qtabbar.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtWidgets/qtabwidget.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtWidgets/qrubberband.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtWidgets/qframe.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtWidgets/qlistview.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtWidgets/qabstractitemview.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtWidgets/qabstractscrollarea.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtWidgets/qcombobox.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtSql/qsqlrelationaltablemodel.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtSql/qsqltablemodel.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtSql/qtsqlversion.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtWidgets/QFileDialog \
+		C:/myQt/5.2.0/mingw48_32/include/QtWidgets/qfiledialog.h \
+		C:/myQt/5.2.0/mingw48_32/include/QtWidgets/qdialog.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\material.o ..\NotesDSS\material.cpp
+
 debug/moc_notesdss.o: debug/moc_notesdss.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\moc_notesdss.o debug\moc_notesdss.cpp
 
@@ -2961,6 +3494,9 @@ debug/moc_columnEditor.o: debug/moc_columnEditor.cpp
 
 debug/moc_people.o: debug/moc_people.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\moc_people.o debug\moc_people.cpp
+
+debug/moc_material.o: debug/moc_material.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\moc_material.o debug\moc_material.cpp
 
 ####### Install
 

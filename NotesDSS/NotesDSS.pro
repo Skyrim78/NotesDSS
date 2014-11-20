@@ -17,7 +17,8 @@ SOURCES += main.cpp\
     units.cpp \
     firms.cpp \
     columnEditor.cpp \
-    people.cpp
+    people.cpp \
+    material.cpp
 
 HEADERS  += notesdss.h \
     units.h \

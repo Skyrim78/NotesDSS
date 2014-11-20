@@ -10,6 +10,7 @@
 #include "units.h"
 #include "firms.h"
 #include "people.h"
+#include "material.h"
 
 namespace Ui {
 class NotesDSS;
@@ -36,6 +37,7 @@ public slots:
     void unitsWidget();
     void firmsWidget();
     void peopleWidget();
+    void materialWidget();
 };
 
 #endif // NOTESDSS_H

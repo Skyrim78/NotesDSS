@@ -19,8 +19,8 @@
 
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_NotesDSS_t {
-    QByteArrayData data[12];
-    char stringdata[115];
+    QByteArrayData data[13];
+    char stringdata[130];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -40,12 +40,13 @@ QT_MOC_LITERAL(7, 61, 8),
 QT_MOC_LITERAL(8, 70, 6),
 QT_MOC_LITERAL(9, 77, 11),
 QT_MOC_LITERAL(10, 89, 11),
-QT_MOC_LITERAL(11, 101, 12)
+QT_MOC_LITERAL(11, 101, 12),
+QT_MOC_LITERAL(12, 114, 14)
     },
     "NotesDSS\0readSetting\0\0writeSetting\0"
     "connectDB\0openWidget\0name\0QWidget*\0"
     "widget\0unitsWidget\0firmsWidget\0"
-    "peopleWidget\0"
+    "peopleWidget\0materialWidget\0"
 };
 #undef QT_MOC_LITERAL
 
@@ -55,7 +56,7 @@ static const uint qt_meta_data_NotesDSS[] = {
        7,       // revision
        0,       // classname
        0,    0, // classinfo
-       7,   14, // methods
+       8,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -63,19 +64,21 @@ static const uint qt_meta_data_NotesDSS[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    0,   49,    2, 0x0a,
-       3,    0,   50,    2, 0x0a,
-       4,    0,   51,    2, 0x0a,
-       5,    2,   52,    2, 0x0a,
-       9,    0,   57,    2, 0x0a,
-      10,    0,   58,    2, 0x0a,
-      11,    0,   59,    2, 0x0a,
+       1,    0,   54,    2, 0x0a,
+       3,    0,   55,    2, 0x0a,
+       4,    0,   56,    2, 0x0a,
+       5,    2,   57,    2, 0x0a,
+       9,    0,   62,    2, 0x0a,
+      10,    0,   63,    2, 0x0a,
+      11,    0,   64,    2, 0x0a,
+      12,    0,   65,    2, 0x0a,
 
  // slots: parameters
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void, QMetaType::QString, 0x80000000 | 7,    6,    8,
+    QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
@@ -95,6 +98,7 @@ void NotesDSS::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, vo
         case 4: _t->unitsWidget(); break;
         case 5: _t->firmsWidget(); break;
         case 6: _t->peopleWidget(); break;
+        case 7: _t->materialWidget(); break;
         default: ;
         }
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
@@ -136,13 +140,13 @@ int NotesDSS::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 7)
+        if (_id < 8)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 7;
+        _id -= 8;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 7)
+        if (_id < 8)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 7;
+        _id -= 8;
     }
     return _id;
 }

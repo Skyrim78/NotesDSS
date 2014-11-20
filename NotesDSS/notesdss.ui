@@ -84,7 +84,7 @@
     <addaction name="separator"/>
     <addaction name="aPeople"/>
     <addaction name="separator"/>
-    <addaction name="action_3"/>
+    <addaction name="aMaterial"/>
     <addaction name="aUnits"/>
     <addaction name="separator"/>
     <addaction name="action_9"/>
@@ -121,7 +121,7 @@
     <string>Сотрудники</string>
    </property>
   </action>
-  <action name="action_3">
+  <action name="aMaterial">
    <property name="text">
     <string>Материалы</string>
    </property>

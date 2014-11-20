@@ -11,6 +11,7 @@ NotesDSS::NotesDSS(QWidget *parent) :
     connect(ui->aUnits, SIGNAL(triggered()), this, SLOT(unitsWidget()));
     connect(ui->aFirms, SIGNAL(triggered()), this, SLOT(firmsWidget()));
     connect(ui->aPeople, SIGNAL(triggered()), this, SLOT(peopleWidget()));
+    connect(ui->aMaterial, SIGNAL(triggered()), this, SLOT(materialWidget()));
 }
 
 NotesDSS::~NotesDSS()
@@ -100,4 +101,9 @@ void NotesDSS::firmsWidget(){
 void NotesDSS::peopleWidget(){
     people *p = new people(this);
     openWidget("Сотрудники", p);
+}
+
+void NotesDSS::materialWidget(){
+    material *m = new material(this);
+    openWidget("Материалы", m);
 }

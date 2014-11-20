@@ -5,9 +5,11 @@ INPUT(
 ./debug\firms.o
 ./debug\columnEditor.o
 ./debug\people.o
+./debug\material.o
 ./debug\moc_notesdss.o
 ./debug\moc_units.o
 ./debug\moc_firms.o
 ./debug\moc_columnEditor.o
 ./debug\moc_people.o
+./debug\moc_material.o
 );
